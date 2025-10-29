@@ -1,0 +1,98 @@
+/*COLOR SCHEME
+
+FROM WEBSITE:color palette generator: "Coolors"/ Earthy Forest Hues Palette/ Olive Garden Feast/ and Earthy Tones Inspiration
+-------------------------------------------------------------- 
+Primary Color: #344e41 (dark green)
+Secondary Color: #3a5a40 (green)
+Background Color: #dad7cd (greenish grey)
+Secondary Background Color: #a3b18a (light greyish green)
+Text Color: #588157 (lighter green)
+Accent Color: #edafb8 (Pink)
+FONT STYLES
+Primary Font: 'Roboto', sans-serif  
+Secondary Font: 'Open Sans', sans-serif
+Heading Font: 'Montserrat', sans-serif
+BODY STYLES
+body {
+    background-color: #4a5759(greyish green);
+    color: #dedbd2(light greyish green);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+HEADER STYLES
+header {
+    background-color: #b0c4b1(greyish green);
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+BUTTON STYLES
+button {
+    background-color: #dad7cd(greenish grey);
+    border: none;
+    color: #344e41 (dark green);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+button:hover {
+    background-color: #edafb8 (Pink);
+} 
+LINK STYLES
+a {
+    color: #bc6c25(orange brown);
+    text-decoration: none;
+}       
+/*ADDITIONAL STYLES CAN BE ADDED BELOW AS NEEDED*/
+
+/****************SITE WIDE STYLES****************/
+
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif ;
+}
+
+/**************HEADER STYLES****************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    background-color: #a3b18a; 
+    color:  #FFFFFF; 
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 7px;
+    min-width: 100px;
+    min-height: 200px;
+}
+header span {
+    align-self: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:  #FFFFFF;
+}
+
+/**************Hamburger BUTTON STYLES****************/
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color:  #FFFFFF; /* Text Color */
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.hamburger::before {
+    content: '\2630'; /* Unicode for hamburger icon */
+}   
+.hamburger.show::before {
+    content: '\00D7'; /* Unicode for close icon */
+}
