@@ -138,10 +138,28 @@ footer {
     font-family: 'Open Sans', sans-serif; 
     margin-top: 20px;
 }
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 .social-media a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5px;
+    gap: 15px;
     border: none;
+    height: 44px;
+    width: 44px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+}
+.social-media img {
+    width: 22px;
+    height: 22px;
+}
+.social-media a:hover {
+    filter: invert(0.5) grayscale(100%) sepia(100%) hue-rotate(80deg);
 }
