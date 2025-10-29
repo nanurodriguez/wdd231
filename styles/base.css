@@ -38,11 +38,11 @@ button {
     font-family: 'Open Sans', sans-serif;
 }
 button:hover {
-    background-color: #edafb8 (Pink);
+    background-color: #dad7cd (greenish grey);
 } 
 LINK STYLES
 a {
-    color: #bc6c25(orange brown);
+    color: #344e41 (dark green);
     text-decoration: none;
 }       
 /*ADDITIONAL STYLES CAN BE ADDED BELOW AS NEEDED*/
@@ -61,7 +61,7 @@ header {
     grid-template-columns: 24px auto 44px;
     background-color: #a3b18a; 
     color:  #FFFFFF; 
-    padding: 20px;
+    padding: 5px 0 5px 10px;
     text-align: center;
     font-family: 'Montserrat', sans-serif; 
 
@@ -107,4 +107,41 @@ header span {
 }
 .navigation.show {
     display: block;
+}
+.navigation a {
+    color:  #3a5a40; /* links Color */
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 10px;
+    font-weight: bold;
+    border-bottom: #dad7cd 1px solid; 
+}
+.navigation a:hover {
+    background-color: #dad7cd; /* Accent Color on hover */
+    color:  #344e41; /* Text Color on hover */
+}
+.navigation li.current {
+    background-color: #dad7cd; /* Accent Color for current page */
+    color:  #344e41; /* Text Color for current page */
+}
+h1 {
+    margin-left: 10px
+}
+
+/***************FOOTER STYLES****************/
+
+footer {
+    background-color: #a3b18a; /* Secondary Background Color */
+    color:  #FFFFFF; /* Text Color */
+    text-align: center;
+    padding: 1rem 10px;
+    font-family: 'Open Sans', sans-serif; 
+    margin-top: 20px;
+}
+.social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border: none;
 }
