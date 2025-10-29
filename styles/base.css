@@ -88,11 +88,23 @@ header span {
     font-size: 2em;
     color:  #FFFFFF; /* Text Color */
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana;
 }
 .hamburger::before {
     content: '\2630'; /* Unicode for hamburger icon */
 }   
 .hamburger.show::before {
     content: '\00D7'; /* Unicode for close icon */
+}
+/**************NAVIGATION STYLES****************/
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.navigation {
+    display: none;
+}
+.navigation.show {
+    display: block;
 }
