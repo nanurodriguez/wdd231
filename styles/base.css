@@ -61,7 +61,7 @@ body {
     color:  #344e41; /* Text Color */
     margin: 0;
     padding: 0;
-    min-width: 8rem;
+    min-width: 320px;
     overflow-x: hidden;
 }
 header {
