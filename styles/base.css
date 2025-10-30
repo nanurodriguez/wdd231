@@ -57,12 +57,13 @@ a {
 
 /**************HEADER STYLES****************/
 body {
-    background-color: #FFFFFF; /* Background Color */
-    color:  #344e41; /* Text Color */
+    background-color: #FFFFFF; 
+    color:  #344e41;
     margin: 0;
     padding: 0;
     min-width: 320px;
     overflow-x: hidden;
+    padding-bottom: 60px; /* Space for fixed footer */
 }
 header {
     display: grid;
@@ -90,7 +91,7 @@ header span {
     font-weight: bold;
     color:  #FFFFFF;
     padding-left:45px;
-}
+} 
 
 /**************Hamburger BUTTON STYLES****************/
 .hamburger {
@@ -130,26 +131,68 @@ header span {
     border-bottom: #dad7cd 1px solid; 
 }
 .navigation a:hover {
-    background-color: #dad7cd; /* Accent Color on hover */
-    color:  #344e41; /* Text Color on hover */
+    background-color: #dad7cd; 
+    color:  #344e41; 
 }
 .navigation li.current {
-    background-color: #dad7cd; /* Accent Color for current page */
-    color:  #344e41; /* Text Color for current page */
+    background-color: #dad7cd; 
+    color:  #344e41; 
 }
-h1 {
-    margin-left: 10px
+
+/****************MAIN STYLES****************/
+main {
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif; 
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; 
+    color: #344e41; 
+    font-size: 1.2rem;
+}
+.banner {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+div.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+section {
+    margin: 20px 0 20px 0;
+}
+section.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    justify-content: center
+}   
+
 
 /***************FOOTER STYLES****************/
 
 footer {
-    background-color: #a3b18a; /* Secondary Background Color */
-    color:  #FFFFFF; /* Text Color */
+    position: fixed;
+    bottom: 0;
+    background-color: #a3b18a; 
+    color:  #FFFFFF; 
     text-align: center;
     padding: 1rem 10px;
     font-family: 'Open Sans', sans-serif; 
     margin-top: 20px;
+    z-index: 1000;
 }
 .social-media {
     display: flex;
