@@ -1,17 +1,42 @@
 @media only screen and (min-width: 38rem) {
-    header, main, nav, footer {
-        max-width: 36rem;
+
+/************** Header Styles for larger screens ****************/
+    header, main, footer {
+        width: 100%;
         margin: 0 auto;
     }
-
+    header {
+    display: grid;
+    grid-template-columns: 100px auto 44px;
+    }
+    header img {
+        width: 200px;
+        height: auto;
+        padding-top: 0;
+        padding-left: 50px;
+    }
+    header span {
+        font-size: 2rem;
+        padding-right: 60px;
+    }
+    /************** Navigation Bar Styles for larger screens ****************/
     .hamburger {
         display: none;
+    }
+    .nav-bar{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
     }
     .navigation {
         display: block;
     }
     .navigation ul {
         display:flex;
-        justify-content: space-around;
+        justify-content: center;
+    }
+    .navigation ul li {
+        margin: 0 25px;
     }
 }

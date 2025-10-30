@@ -56,29 +56,40 @@ a {
 }
 
 /**************HEADER STYLES****************/
+body {
+    background-color: #FFFFFF; /* Background Color */
+    color:  #344e41; /* Text Color */
+    margin: 0;
+    padding: 0;
+    min-width: 8rem;
+    overflow-x: hidden;
+}
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
     background-color: #a3b18a; 
     color:  #FFFFFF; 
-    padding: 5px 0 5px 10px;
+    padding: 5px 10px 5px 5px;
     text-align: center;
     font-family: 'Montserrat', sans-serif; 
+    gap: 10px;
 
 }
 header img {
     display: block;
-    width: 100%;
+    width: 150px;
     height: auto;
     padding-top: 7px;
-    min-width: 100px;
-    min-height: 200px;
+    min-width: 40px;
+    min-height: auto;
+
 }
 header span {
     align-self: center;
     font-size: 1.5em;
     font-weight: bold;
     color:  #FFFFFF;
+    padding-left:45px;
 }
 
 /**************Hamburger BUTTON STYLES****************/
@@ -89,6 +100,8 @@ header span {
     color:  #FFFFFF; /* Text Color */
     cursor: pointer;
     font-family: Verdana;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .hamburger::before {
     content: '\2630'; /* Unicode for hamburger icon */
