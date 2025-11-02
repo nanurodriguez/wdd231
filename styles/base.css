@@ -52,7 +52,6 @@ a {
 /* Reset some default styles */
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif ;
 }
 
 /**************HEADER STYLES****************/
@@ -64,6 +63,7 @@ body {
     min-width: 320px;
     overflow-x: hidden;
     padding-bottom: 60px; /* Space for fixed footer */
+    font-family: 'Roboto', sans-serif;
 }
 header {
     display: grid;
@@ -82,8 +82,6 @@ header img {
     height: auto;
     padding-top: 7px;
     min-width: 40px;
-    min-height: auto;
-
 }
 header span {
     align-self: center;
@@ -143,11 +141,13 @@ header span {
 main {
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
-     min-width: 320px; 
+    min-width: 320px; 
+    min-width: 320px; 
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif; 
@@ -162,26 +162,24 @@ h1, h2, h3, h4, h5, h6 {
 div.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-height: fit-content;
+    max-height: none;
 }
 section {
     margin: 20px 0 20px 0;
 }
-section.profile {
+.profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: fit-content;
+    max-height: none;
 }
 .profile img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 15px;
 }   
 
 
@@ -198,7 +196,7 @@ footer {
     margin-top: 20px;
     z-index: 1000;
     width: 100%;
-    max-height: fit-content;
+    max-height: none;
 }
 .social-media {
     display: flex;
