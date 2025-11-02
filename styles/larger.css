@@ -7,17 +7,16 @@
     }
     header {
     display: grid;
-    grid-template-columns: 100px auto 44px;
+    grid-template-columns: 300px auto 0;
     }
     header img {
-        width: 200px;
+        width: 300px;
         height: auto;
         padding-top: 0;
-        padding-left: 50px;
+        padding-left: 120px;
     }
     header span {
         font-size: 2rem;
-        padding-right: 60px;
     }
     /************** Navigation Bar Styles for larger screens ****************/
     .hamburger {
@@ -39,4 +38,24 @@
     .navigation ul li {
         margin: 0 25px;
     }
+
+    /**************Main Styles for larger screens****************/
+    main {
+        max-width: 1400px;
+        max-height: 800px;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+    }
+    div.cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .cards section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
 }
