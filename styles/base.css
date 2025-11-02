@@ -62,7 +62,9 @@ body {
     padding: 0;
     min-width: 320px;
     overflow-x: hidden;
-    padding-bottom: 60px; /* Space for fixed footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
 }
 header {
@@ -141,13 +143,13 @@ header span {
 main {
     padding: 20px;
     font-family: 'Open Sans', sans-serif;
-    min-width: 320px; 
-    min-width: 320px; 
+    min-width: 320px;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif; 
@@ -186,17 +188,14 @@ section {
 /***************FOOTER STYLES****************/
 
 footer {
-    position: fixed;
-    bottom: 0;
     background-color: #a3b18a; 
     color:  #FFFFFF; 
     text-align: center;
     padding: 1rem 10px;
     font-family: 'Open Sans', sans-serif; 
-    margin-top: 20px;
-    z-index: 1000;
+    margin-top: auto;
     width: 100%;
-    max-height: none;
+    flex-shrink: 0;
 }
 .social-media {
     display: flex;
