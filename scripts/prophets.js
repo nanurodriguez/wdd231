@@ -10,31 +10,41 @@ async function getProphetsData() {
 }
 getProphetsData();
 
-/*If you see the URL log, the function was called
-If you see the status 200, the fetch was successful
-If you see the number of prophets, the JSON parsing worked
-If you see the table, the data structure is correct
-If you see the first prophet details, the data is accessible for use*/
-
-
+/*
+  displayProphets - Render an array of prophet objects into the page.
+  Each prophet is appended as a <section> with a heading and portrait image.
+*/
 const displayProphets = (prophets) => {
+    // Clear any existing content
+    cards.innerHTML = '';
+
     prophets.forEach((prophet) => {
-        // Create elements to add to the document
-        let card = document.createElement('section');
-        let fullName = document.createElement('h2');
-        let portrait = document.createElement('img');
-        fullName.innerText = `${prophet.firstName} ${prophet.lastName}`;
-        //Also: fullName.textContent = `${prophet.firstName} ${prophet.lastName}`;
+        // Create elements
+        const card = document.createElement('section');
+        card.className = 'prophet-card';
 
-        portrait.setAttribute('src', prophet.imageUrl);
-        portrait.setAttribute('alt',`Portrait of ${prophet.firstName} $ss{prophet.lastName}`);
-        portrait.setAttribute('loading','lazy');
-        portrait.setAttribute('width', 300);
-        portrait.setAttribute('height', 400);
+        const fullName = document.createElement('h2');
+        fullName.textContent = `${prophet.name} ${prophet.lastname}` || `${prophet.firstName || ''} ${prophet.lastName || ''}`;
 
-        // Append the elements to the card
+        const details = document.createElement('p');
+        // Example: birthdate and birthplace if present
+        details.textContent = `${prophet.birthdate || ''} — ${prophet.birthplace || ''}`;
+
+        const portrait = document.createElement('img');
+        // Use a safe src (fallback if imageUrl missing)
+        portrait.src = prophet.imageurl || prophet.imageUrl || 'images/default-portrait.jpg';
+        portrait.alt = `Portrait of ${prophet.name || prophet.firstName} ${prophet.lastname || prophet.lastName}`;
+        portrait.loading = 'lazy';
+        portrait.width = 300;
+        portrait.height = 400;
+        portrait.className = 'prophet-portrait';
+
+        // Append elements to the card
         card.appendChild(fullName);
+        card.appendChild(details);
         card.appendChild(portrait);
-        cards.appendChild(card);        
+
+        // Append the card to the container
+        cards.appendChild(card);
     });
 };
