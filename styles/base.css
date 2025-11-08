@@ -69,8 +69,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 header {
     display: grid;
