@@ -73,7 +73,7 @@ body {
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
-    background-color: #b2be9c; 
+    background-color: #b9c7a2; 
     color:  #344e41; 
     padding: 5px 10px 5px 5px;
     text-align: center;
@@ -191,7 +191,7 @@ section {
 /***************FOOTER STYLES****************/
 
 footer {
-    background-color: #b2be9c; 
+    background-color: #b9c7a2; 
     color:  #344e41; 
     text-align: center;
     padding: 1rem 10px;
@@ -241,7 +241,7 @@ footer {
 
 .buttons button {
   padding: 8px 12px;
-  background-color: #a3b18a;
+  background-color: #b9c7a2;
   color: #344e41;
   font-weight: bold;
   border: none;
@@ -266,7 +266,7 @@ footer {
 .course-cards {
   padding: 12px;
   margin: 12px;
-  background: #a3b18a;
+  background: #b9c7a2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
