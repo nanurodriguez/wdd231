@@ -220,10 +220,6 @@ footer {
     width: 44px;
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
 }
-.social-media img {
-    width: 22px;
-    height: 22px;
-}
 .social-media a:hover {
     filter: brightness(0) saturate(100%) invert(26%) sepia(27%) saturate(468%) hue-rotate(97deg) brightness(91%) contrast(88%);
 }
