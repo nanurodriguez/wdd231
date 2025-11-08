@@ -1,5 +1,4 @@
-// Enhanced renderer for course cards (JS-only change)
-// If you fetch JSON, call renderCourses(fetchedCourses) after fetch completes.
+
 const courses = [
     { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, description: 'Intro to programming.', completed: true },
     { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, description: 'Web fundamentals.', completed: true },
@@ -9,7 +8,6 @@ const courses = [
     { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, description: 'Frontend fundamentals and accessibility.', completed: false }
 ];
 
-// DOM references (IDs must match your HTML)
 const courseCardsContainer = document.querySelector('#course-cards');
 const allBtn = document.querySelector('#allCourses');
 const wddBtn = document.querySelector('#wddCourses');
@@ -21,16 +19,16 @@ function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, (s) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
 
-function renderCourses(list) {
+function displayCourses(list) {
 
     courseCardsContainer.innerHTML = '';
 
-    // total credits for completed courses within the filtered list 
-    const total = list.filter(c => c.completed).reduce((s, c) => s + (Number(c.credits) || 0), 0);
+    const total = list.filter(c => c.completed)
+        .map(c => c.credits).reduce((sum, course) => sum + (Number(course.credits) || 0), 0);
+    
     if (creditsSpan) creditsSpan.textContent = total;
 
-    // Build each card with course name and number 
-    list.forEach(course => {
+        list.forEach(course => {
         const article = document.createElement('article');
         article.className = 'course-card';
         if (course.completed) article.classList.add('completed');
@@ -53,15 +51,11 @@ function renderCourses(list) {
 }
 
 // Wire up buttons (register once)
-if (allBtn) allBtn.addEventListener('click', () => renderCourses(courses));
-if (wddBtn) wddBtn.addEventListener('click', () => renderCourses(courses.filter(c => c.subject === 'WDD')));
-if (cseBtn) cseBtn.addEventListener('click', () => renderCourses(courses.filter(c => c.subject === 'CSE')));
+if (allBtn) allBtn.addEventListener('click', () => displayCourses(courses));
+if (wddBtn) wddBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'WDD')));
+if (cseBtn) cseBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'CSE')));
 
-// Initial render
-renderCourses(courses);
-
-// Expose for debugging
-window._renderCourses = renderCourses;
+displayCourses(courses);
 
 
 

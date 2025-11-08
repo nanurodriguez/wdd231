@@ -288,3 +288,8 @@ footer {
   height: auto;
   width: 100px;
 }
+article.course-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
