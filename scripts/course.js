@@ -15,7 +15,7 @@ const courseCardsContainer = document.querySelector('#course-cards');
 const allBtn = document.querySelector('#allCourses');
 const wddBtn = document.querySelector('#wddCourses');
 const cseBtn = document.querySelector('#cseCourses');
-const creditsSpan = document.querySelector('#credits-completed');
+const creditsSum = document.querySelector('#credits-completed');
 
 // Utility functions
 function escapeHtml(str) {
@@ -29,10 +29,14 @@ function displayCourses(list) {
 
     courseCardsContainer.innerHTML = '';
 
-    const total = list.filter(c => c.completed)
-        .map(c => c.credits).reduce((sum, course) => sum + (Number(course.credits) || 0), 0);
-    
-    if (creditsSpan) creditsSpan.textContent = total;
+    // Calculate total credits for completed courses in a single, robust pass.
+    // Guard against missing or non-numeric credits values.
+    const total = list.reduce((sum, c) => {
+        const credits = Number(c.credits) || 0;
+        return sum + (c.completed ? credits : 0);
+    }, 0);
+
+    if (creditsSum) creditsSum.textContent = total;
 
         list.forEach(course => {
         const article = document.createElement('article');
