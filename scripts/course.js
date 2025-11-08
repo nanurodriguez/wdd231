@@ -1,3 +1,4 @@
+// Course data array
 
 const courses = [
     { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, description: 'Intro to programming.', completed: true },
@@ -8,16 +9,21 @@ const courses = [
     { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, description: 'Frontend fundamentals and accessibility.', completed: false }
 ];
 
+// DOM elements
+
 const courseCardsContainer = document.querySelector('#course-cards');
 const allBtn = document.querySelector('#allCourses');
 const wddBtn = document.querySelector('#wddCourses');
 const cseBtn = document.querySelector('#cseCourses');
 const creditsSpan = document.querySelector('#credits-completed');
 
+// Utility functions
 function escapeHtml(str) {
     if (!str) return '';
     return String(str).replace(/[&<>"']/g, (s) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
+
+// Main display function (it will make the course cards appear when called)
 
 function displayCourses(list) {
 
@@ -33,7 +39,6 @@ function displayCourses(list) {
         article.className = 'course-card';
         if (course.completed) article.classList.add('completed');
 
-        // Header
         const header = document.createElement('div');
         header.className = 'course-card-header';
         const title = document.createElement('h3');
@@ -41,7 +46,7 @@ function displayCourses(list) {
         title.innerHTML = `${escapeHtml(course.subject)} ${escapeHtml(course.number)}`;
         header.appendChild(title);
 
-        // Meta row
+
         const meta = document.createElement('div');
         meta.className = 'course-meta';
         article.appendChild(header);
@@ -50,7 +55,8 @@ function displayCourses(list) {
     });
 }
 
-// Wire up buttons (register once)
+// Event listeners
+
 if (allBtn) allBtn.addEventListener('click', () => displayCourses(courses));
 if (wddBtn) wddBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'WDD')));
 if (cseBtn) cseBtn.addEventListener('click', () => displayCourses(courses.filter(c => c.subject === 'CSE')));
