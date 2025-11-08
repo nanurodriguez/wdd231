@@ -10,10 +10,12 @@
     grid-template-columns: 300px auto 1fr;
     }
     header img {
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
         height: auto;
         padding-top: 0;
         padding-left: 120px;
+        object-fit: cover;
     }
     header span {
         font-size: 2rem;
@@ -72,6 +74,8 @@
         height: 150px;
         object-fit: cover;
         margin-bottom: 15px;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
     }
 
 /************** Footer Styles for larger screens ****************/
