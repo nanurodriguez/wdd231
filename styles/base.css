@@ -76,7 +76,7 @@ header {
     display: grid;
     grid-template-columns: 24px auto 44px;
     background-color: #a3b18a; 
-    color:  #FFFFFF; 
+    color:  #344e41; 
     padding: 5px 10px 5px 5px;
     text-align: center;
     font-family: 'Montserrat', sans-serif; 
@@ -94,7 +94,7 @@ header span {
     align-self: center;
     font-size: 1.5em;
     font-weight: bold;
-    color:  #FFFFFF;
+    color:  #344e41;
     padding-left:45px;
 } 
 
@@ -103,7 +103,7 @@ header span {
     background: none;
     border: none;
     font-size: 2em;
-    color:  #FFFFFF; /* Text Color */
+    color:  #344e41; 
     cursor: pointer;
     font-family: Verdana;
     padding-left: 10px;
@@ -128,7 +128,7 @@ header span {
     display: block;
 }
 .navigation a {
-    color:  #3a5a40; /* links Color */
+    color:  #344e41; 
     text-decoration: none;
     display: block;
     padding: 0.8rem 10px;
@@ -136,8 +136,8 @@ header span {
     border-bottom: #dad7cd 1px solid; 
 }
 .navigation a:hover {
-    background-color: #dad7cd; 
-    color:  #344e41; 
+    background-color: #344e41; 
+    color:  #dad7cd; 
 }
 .navigation li.current {
     background-color: #dad7cd; 
