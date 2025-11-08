@@ -75,7 +75,7 @@ body {
 header {
     display: grid;
     grid-template-columns: 24px auto 44px;
-    background-color: #a3b18a; 
+    background-color: #b2be9c; 
     color:  #344e41; 
     padding: 5px 10px 5px 5px;
     text-align: center;
@@ -193,7 +193,7 @@ section {
 /***************FOOTER STYLES****************/
 
 footer {
-    background-color: #a3b18a; 
+    background-color: #b2be9c; 
     color:  #344e41; 
     text-align: center;
     padding: 1rem 10px;
