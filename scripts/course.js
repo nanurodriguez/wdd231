@@ -1,110 +1,67 @@
+// Enhanced renderer for course cards (JS-only change)
+// If you fetch JSON, call renderCourses(fetchedCourses) after fetch completes.
 const courses = [
-    {
-        subject: 'CSE',
-        number: 110,
-        title: 'Introduction to Programming',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 130,
-        title: 'Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
-        completed: true
-    },
-    {
-        subject: 'CSE',
-        number: 111,
-        title: 'Programming with Functions',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
-        completed: true
-    },
-    {
-        subject: 'CSE',
-        number: 210,
-        title: 'Programming with Classes',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 131,
-        title: 'Dynamic Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 231,
-        title: 'Frontend Web Development I',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: false
-    }
-]
+    { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, description: 'Intro to programming.', completed: true },
+    { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, description: 'Web fundamentals.', completed: true },
+    { subject: 'CSE', number: 111, title: 'Programming with Functions', credits: 2, description: 'Functions and modular programming.', completed: true },
+    { subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 2, description: 'Intro to OOP.', completed: true },
+    { subject: 'WDD', number: 131, title: 'Dynamic Web Fundamentals', credits: 2, description: 'Dynamic web with JS.', completed: true },
+    { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, description: 'Frontend fundamentals and accessibility.', completed: false }
+];
 
-//Dynamically display all the courses in the certificate section of the webpage
-const courseCardsContainer = document.getElementById('course-cards');
-function displayCourses(courseList) {
-    courseCardsContainer.innerHTML = '';
-    courseList.forEach(course => {
-        const courseCard = document.createElement('div');
-        courseCard.classList.add('course-card');
-        if (course.completed) {
-            courseCard.classList.add('completed-course');
-        }
-        courseCard.innerHTML = `
-            <h3>${course.subject} ${course.number}: ${course.title}</h3>
-            <p><strong>Credits:</strong> ${course.credits}</p>
-            <p><strong>Description:</strong> ${course.description}</p>
-            <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
-        `;
-        courseCardsContainer.appendChild(courseCard);
-    }
-);
+// DOM references (IDs must match your HTML)
+const courseCardsContainer = document.querySelector('#course-cards');
+const allBtn = document.querySelector('#allCourses');
+const wddBtn = document.querySelector('#wddCourses');
+const cseBtn = document.querySelector('#cseCourses');
+const creditsSpan = document.querySelector('#credits-completed');
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/[&<>"']/g, (s) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[s]));
 }
 
-//The courses that I have completed must be marked in a different way versus those that you have not completed. 
+function renderCourses(list) {
 
-//The page should adjust automatically if the data source changes.
+    courseCardsContainer.innerHTML = '';
 
-//Using buttons that listen for the click event, allow the user to select to display All Courses, WDD Courses, or CSE Courses. Hint: Use the array filter method.
+    // total credits for completed courses within the filtered list 
+    const total = list.filter(c => c.completed).reduce((s, c) => s + (Number(c.credits) || 0), 0);
+    if (creditsSpan) creditsSpan.textContent = total;
 
-//Design the course cards to indicate those courses that you have completed personally in a complimentary, but different style than the rest, indicating course completion.
+    // Build each card with course name and number 
+    list.forEach(course => {
+        const article = document.createElement('article');
+        article.className = 'course-card';
+        if (course.completed) article.classList.add('completed');
 
-//Provide a total number of credits required dynamically by using a reduce function (not shown on the screenshots). The number of credits shown should reflect just the courses currently being displayed.
+        // Header
+        const header = document.createElement('div');
+        header.className = 'course-card-header';
+        const title = document.createElement('h3');
+        title.className = 'course-title';
+        title.innerHTML = `${escapeHtml(course.subject)} ${escapeHtml(course.number)}`;
+        header.appendChild(title);
+
+        // Meta row
+        const meta = document.createElement('div');
+        meta.className = 'course-meta';
+        article.appendChild(header);
+        article.appendChild(meta);
+        courseCardsContainer.appendChild(article);
+    });
+}
+
+// Wire up buttons (register once)
+if (allBtn) allBtn.addEventListener('click', () => renderCourses(courses));
+if (wddBtn) wddBtn.addEventListener('click', () => renderCourses(courses.filter(c => c.subject === 'WDD')));
+if (cseBtn) cseBtn.addEventListener('click', () => renderCourses(courses.filter(c => c.subject === 'CSE')));
+
+// Initial render
+renderCourses(courses);
+
+// Expose for debugging
+window._renderCourses = renderCourses;
+
+
+

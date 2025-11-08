@@ -220,5 +220,71 @@ footer {
     height: 22px;
 }
 .social-media a:hover {
-    filter: invert(0.5) grayscale(100%) sepia(100%) hue-rotate(80deg);
+    filter: invert(0.5) grayscale(100%) sepia(100%) hue-rotate(100deg);
+}
+/*******************COURSE LIST STYLES******************/
+
+.courses-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons button {
+  padding: 8px 12px;
+  background-color: #2f5240;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #172c1b;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.course-card h3 {
+  margin-top: 0;
+}
+
+.course-cards {
+  padding: 12px;
+  margin: 12px;
+  background: #344e41;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  border-radius: 8px;
+
+}
+
+.course-card.completed {
+  background: #e6f7e6; 
+  border-radius: 8px;
+  height: auto;
+  width: 100px;
+}
+
+.course-card {
+  border: 1px solid #e6f7e6;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #edafb8;
+  height: auto;
+  width: 100px;
 }

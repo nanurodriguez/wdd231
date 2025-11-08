@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-    <img src="images/logo.svg" alt="site logo" class="logo" width="50px" height="50px">
+    <img src="images/logo.svg" alt="site logo" class="logo" width="50px" height="100px">
     <span>Nancy Bell</span>
     <button id="ham-button" class="hamburger" aria-label="navigation"></button>
     </header>
@@ -34,7 +34,7 @@
         <div class="banner">
             <h1>Home</h1>
             <p>Welcome to my homepage! This is where I will be documenting my progress throughout the course of my career. Feel free to explore the different sections to see my assignments and final project details.</p>
-            <img src="images/banner.jpg" alt="homepage banner" width="100%" height="200px">
+            <img src="images/homePageBanner.jpg" alt="homepage banner image showing hands typing on a keyboard" width="100%" height="200px">
         </div>
         <div class="cards">
             <section class="about-me">
@@ -45,19 +45,26 @@
                 <img src="images/profile.png" alt="picture of myself looking towards the camera" width="100" height="100"> 
             </section>
         </div>
-        <div class="course-cards">
-            <h2>Web Certificate Courses</h2>
+
+        <div id="courses-controls" class="courses-controls">
+            <h2>Web  and Computer Programming Certificate Courses</h2>
+            <div id="buttons" class="buttons">
+                <button id="allCourses" class="allCourses">All Courses</button>
+                <button id="wddCourses" class="wddCourses">WDD Courses</button>
+                <button id="cseCourses" class="cseCourses">CSE Courses</button>
+            </div>
+
+            <div id="total-credits" class="total-credits">
+                <h3>Total Credits Completed: <span id="credits-completed">0</span></h3>
+            </div>
             <div id="course-cards" class="course-cards">
-                <!-- Course cards will be dynamically inserted here --->
-                <button id="allCourses" class="allCourses">All</button>
-                <button id="cseCourse" class="cseCourse">CSE</button>
-                <button id="wddCourse" class="wddCourse">WDD</button>
+                <!-- Course list will be dynamically inserted here --->
             </div>
         </div>
     </main>
     <footer>
         <div class="social-media">
-            <a href="https://github.com/nanurodriguez" target="_blank"><img src="images/githubIcon.svg" alt="github Icon"  width="16" height="16"></a>
+            <a href="https://github.com/nanurodriguez" target="_blank"><img src="images/gitHubIcon.svg" alt="github Icon"  width="16" height="16"></a>
             <a href="https://www.linkedin.com/in/nancybellweb/" target="_blank"><img src="images/linkedinIcon.svg" alt="LinkedIn Icon" width="16" height="16"></a>
             <a href="https://www.facebook.com/profile.php?id=61572028127332" target="_blank"><img src="images/facebookIcon.svg" alt="Facebook Icon" width="16" height="16"></a>
             <a href="https://www.instagram.com/nancybellweb/" target="_blank"><img src="images/instagramIcon.svg" alt="Instagram Icon" width="16" height="16"></a>
