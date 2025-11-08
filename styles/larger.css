@@ -44,7 +44,6 @@
     /**************Main Styles for larger screens****************/
     main {
         max-width: 1400px;
-        max-height: auto;
         display: grid;
         /* Use auto-sized rows so main only takes the space its content needs
            (fractional rows like 1fr/3fr force the grid to stretch)!!! IMPORTANT! */
