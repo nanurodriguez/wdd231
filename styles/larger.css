@@ -14,8 +14,8 @@
         width: 100%;
         height: auto;
         padding-top: 0;
-        padding-left: 120px;
         object-fit: cover;
+        padding-bottom: 0;
     }
     header span {
         font-size: 2rem;
@@ -44,9 +44,12 @@
     /**************Main Styles for larger screens****************/
     main {
         max-width: 1400px;
+        max-height: none;
         display: grid;
-        grid-template-rows: 1fr 3fr;    
-        min-height: 100vh;}
+        grid-template-rows: 1fr 3fr;
+        gap: 10px;
+        margin: 0 auto;
+    }
     div.cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
