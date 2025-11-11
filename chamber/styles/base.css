@@ -1,0 +1,57 @@
+/****************DESIGN BRIEF****************/
+
+/*
+Design Brief
+Primary Color  #7B4019 — for nav bars, headings, and key buttons
+Secondary Color#______
+Background Color: #- Support colors: #FFBF78 and #FFEEA9 — for backgrounds, cards, and hover states
+Text Color #2B2B2B or #3A3A3A — deep charcoal gray
+
+Font Family:
+Serif Fonts (Traditional, Trustworthy):
+Merriweather: Classic yet modern; excellent readability for body text or headers
+Libre Baskerville: Elegant and professional; great for formal tone.
+Georgia:Web-safe, timeless, and easy to read
+
+Sans Serif Fonts (Modern, Clean):
+Open Sans: Clean, modern, and easy to read; great for body text or headers
+Roboto: Clean, modern, and easy to read; great for body text or headers
+Montserrat: Clean, modern, and easy to read; great for body text or headers
+*/
+
+/***************RESET****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/***************HEADER***************/
+header {
+    background-color: #ca7034; 
+    color:  #FFFFFF; 
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+}
+nav {
+    background-color: #7B4019;
+    color: #FFFFFF;
+    padding: 5px 10px 5px 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/***************BODY****************/
+body {
+    background-color: #FFFFFF; 
+    color:  #344e41;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
