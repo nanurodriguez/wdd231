@@ -9,5 +9,7 @@ function setSectionSelection() {
   });
 }
 setSectionSelection(byuiCourse.sections);
-export function displaySections(sections) {
+export function populateSections(sections) {
+  byuiCourse.sections = sections;
+  setSectionSelection();
 }
