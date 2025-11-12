@@ -76,51 +76,26 @@ header span {
 /***************Hamburger button*******************/
 
 .hamburger {
-    background-color: transparent;
+    background: none;
     border: none;
+    font-size: 2em;
+    color: #3A3A3A;
     cursor: pointer;
-    font-size: 2 em;
-    color:#3A3A3A;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    padding: 0 10px 0 10px;
-    margin: 0 0 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.hamburger span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #3A3A3A;
-    margin: 5px 0;
-    transition: transform 0.3s ease-in-out;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .hamburger::before {
-    content: '\2630'; /* Unicode for hamburger icon */
-}   
-.hamburger.show::before {
-    content: '\00D7'; /* Unicode for close icon */
+    content: '\2630'; 
 }
 
-/***************Navigation Bar*******************/
-.nav-bar {
+.hamburger.show::before {
+    content: '\00D7'; 
+}
+
+/***************Navigation*******************/
+.navigation {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #7B4019; 
-    color:  #FFFFFF; 
-    font-family: 'Montserrat', sans-serif; 
-    text-align: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 .navigation.show {
@@ -192,11 +167,21 @@ footer {
     font-family: 'Open Sans', sans-serif; 
     margin-top: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer-content {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;  
-
-
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    font-size: 0.8em;
+    flex-shrink: 0; 
 }
 
 footer span {
@@ -206,3 +191,9 @@ footer span {
     color:  #FFFFFF;    
 }
 
+.footer-content .social-media img {
+    min-width: 30px;
+    min-height: 30px;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+    padding: 10px;
+}
