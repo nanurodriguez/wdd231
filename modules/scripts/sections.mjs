@@ -10,6 +10,4 @@ function setSectionSelection() {
 }
 
 export function populateSections(sections) {
-  byuiCourse.sections = sections;
-  setSectionSelection();
 }
