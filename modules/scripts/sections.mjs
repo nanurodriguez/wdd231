@@ -8,7 +8,7 @@ function setSectionSelection() {
     sectionSelect.appendChild(option);
   });
 }
-setSectionSelection(byuiCourse.sections);
+
 export function populateSections(sections) {
   byuiCourse.sections = sections;
   setSectionSelection();
