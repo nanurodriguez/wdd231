@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sunrise Café",
+    "address": "101 Main St, San Miguel",
+    "phone": "503-2222-1111",
+    "website": "https://sunrisecafe.sv",
+    "image": "sunrise-cafe.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "EcoPrint Solutions",
+    "address": "202 Market Ave, San Miguel",
+    "phone": "503-2222-2222",
+    "website": "https://ecoprint.sv",
+    "image": "ecoprint.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Bella Boutique",
+    "address": "303 Fashion Blvd, San Miguel",
+    "phone": "503-2222-3333",
+    "website": "https://bellaboutique.sv",
+    "image": "bella.jpg",
+    "membership": "Bronze"
+  },
+  {
+    "name": "TechNova IT",
+    "address": "404 Innovation Way, San Miguel",
+    "phone": "503-2222-4444",
+    "website": "https://technova.sv",
+    "image": "technova.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "GreenLeaf Landscaping",
+    "address": "505 Garden Rd, San Miguel",
+    "phone": "503-2222-5555",
+    "website": "https://greenleaf.sv",
+    "image": "greenleaf.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "San Miguel Fitness",
+    "address": "606 Wellness St, San Miguel",
+    "phone": "503-2222-6666",
+    "website": "https://smfitness.sv",
+    "image": "fitness.jpg",
+    "membership": "Bronze"
+  },
+  {
+    "name": "Vista Legal Group",
+    "address": "707 Justice Ave, San Miguel",
+    "phone": "503-2222-7777",
+    "website": "https://vistalegal.sv",
+    "image": "vistalegal.jpg",
+    "membership": "Gold"
+  }
+]

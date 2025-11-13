@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <script src="scripts/dates.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/members.js" defer></script>
     <script src="scripts/join.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="script/newsletter.js" defer></script>
@@ -43,17 +43,37 @@
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"><a href="directory.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Discover</a></li>
             <li><a href="#">Membership</a></li>
             <li><a href="#">Events</a></li>
-            <li><a href="#">Directory</a></li>
+            <li><a href="directory.html" aria-current="page">Directory</a></li>
             <li><a href="#">Resources</a></li>
             <button id ="join-button" class="join-button">Join Now</button>
         </ul>
     </nav>
     <main>
         <h1>Directory</h1>
+        <section class="members-container grid" id="membersContainer">
+        <!-- Member cards will be injected here -->
+        <div class="member-card">
+            <h3>Sunrise Café</h3>
+            <p>101 Main St, San Miguel</p>
+            <p>503-2222-1111</p>
+            <a href="https://sunrisecafe.sv" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="member-card">
+            <h3>EcoPrint Solutions</h3>
+            <p>202 Market Ave, San Miguel</p>
+            <p>503-2222-2222</p>
+            <a href="https://ecoprint.sv" target="_blank">Visit Website</a>
+        </div>
+
+        <!-- member cards will be added here, using Js -->
+        </section>
+
+
     </main>
     <footer>
         <div class="footer-content">
