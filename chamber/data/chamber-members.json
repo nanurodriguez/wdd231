@@ -1,7 +1,7 @@
 [
   {
     "name": "Sunrise Café",
-    "address": "101 Main St, San Miguel",
+    "address": "101 Main St, Ranches",
     "phone": "503-2222-1111",
     "website": "https://sunrisecafe.sv",
     "image": "sunrise-cafe.jpg",
@@ -9,7 +9,7 @@
   },
   {
     "name": "EcoPrint Solutions",
-    "address": "202 Market Ave, San Miguel",
+    "address": "202 Market Ave, Cedar Valley",
     "phone": "503-2222-2222",
     "website": "https://ecoprint.sv",
     "image": "ecoprint.jpg",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Bella Boutique",
-    "address": "303 Fashion Blvd, San Miguel",
+    "address": "303 Fashion Blvd, City Center",
     "phone": "503-2222-3333",
     "website": "https://bellaboutique.sv",
     "image": "bella.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "name": "TechNova IT",
-    "address": "404 Innovation Way, San Miguel",
+    "address": "404 Innovation Way, Pionnier City",
     "phone": "503-2222-4444",
     "website": "https://technova.sv",
     "image": "technova.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "name": "GreenLeaf Landscaping",
-    "address": "505 Garden Rd, San Miguel",
+    "address": "505 Garden Rd, Pionnier Crossing",
     "phone": "503-2222-5555",
     "website": "https://greenleaf.sv",
     "image": "greenleaf.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "name": "San Miguel Fitness",
-    "address": "606 Wellness St, San Miguel",
+    "address": "606 Wellness St, Ranches",
     "phone": "503-2222-6666",
     "website": "https://smfitness.sv",
     "image": "fitness.jpg",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Vista Legal Group",
-    "address": "707 Justice Ave, San Miguel",
+    "address": "707 Justice Ave, City Center",
     "phone": "503-2222-7777",
     "website": "https://vistalegal.sv",
     "image": "vistalegal.jpg",

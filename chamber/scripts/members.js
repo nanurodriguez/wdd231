@@ -1,7 +1,7 @@
 //This code will be used to display the chamber members on the chamber directory page. It will async fetch and toggle view of these members in the DIRECTORY page.
 
 async function loadMembers() {
-  const response = await fetch('data/members.json');
+  const response = await fetch('data/chamber-members.json');
   const members = await response.json();
   displayMembers(members);
 }
