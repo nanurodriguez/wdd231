@@ -265,3 +265,34 @@ footer span {
 .social-media a:hover {
     filter: brightness(0) saturate(100%) invert(26%) sepia(27%) saturate(468%) hue-rotate(97deg) brightness(91%) contrast(88%);
 }
+.contact-us {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:  #FFFFFF;    
+}
+.quick-links {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:  #FFFFFF; 
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.quick-links a {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+.quick-links a:hover {
+    color: #FFEEA9;
+    font-weight: bold;  
+}
+
