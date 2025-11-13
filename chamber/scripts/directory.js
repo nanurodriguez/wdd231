@@ -1,15 +1,16 @@
 //This code will be used to display the chamber members on the chamber directory page. It will async fetch and toggle view of these members in the DIRECTORY page.
+const url = 'data/chamber-members.json';
 
-const container = document.getElementById('#membersContainer');
-const gridBtn = document.getElementById('#gridView');
-const listBtn = document.getElementById('#listView');
+const container = document.querySelector('#membersContainer');
+const gridBtn = document.querySelector('#gridView');
+const listBtn = document.querySelector('#listView');
 
 // Fetch and display members
 async function loadMembers() {
   try {
-    const response = await fetch('data/members.json');
+    const response = await fetch(url);
     const members = await response.json();
-    displayMembers(members);
+    renderMemberCards(members);
   } catch (error) {
     console.error('Error loading members:', error);
     container.innerHTML = '<p>Unable to load member data.</p>';
@@ -17,30 +18,32 @@ async function loadMembers() {
 }
 
 // Render member cards
-function displayMembers(members) {
+function renderMemberCards(members) {
   container.innerHTML = ''; // Clear existing content
 
   members.forEach(member => {
-    const card = document.createElement('div');
-    card.classList.add('member-card');
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('member-card');
 
-    card.innerHTML = `
+    const html = `
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
     `;
 
+    cardElement.innerHTML = html;
+
     // Add image only in grid view
     if (container.classList.contains('grid')) {
-      const img = document.createElement('img');
-      img.src = `images/${member.image}`;
-      img.alt = `${member.name} logo`;
-      img.loading = 'lazy';
-      card.prepend(img);
+      const imageElement = document.createElement('img');
+      imageElement.src = `images/${member.image}`;
+      imageElement.alt = `${member.name} logo`;
+      imageElement.loading = 'lazy';
+      cardElement.prepend(imageElement);
     }
 
-    container.appendChild(card);
+    container.appendChild(cardElement);
   });
 }
 
