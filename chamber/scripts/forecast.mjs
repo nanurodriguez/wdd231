@@ -1,0 +1,25 @@
+
+const url = 'https://api.openweathermap.org/data/2.5/forecast?lat={40.3147}&lon={-112.0069}&appid={fca515f35a96678f2eca2aafa881bc1Y}&units=imperial';
+// Forecast today, tomorrow, and day after tomorrow forecast in the home page index
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const forecastSection = document.getElementById('#forecast');
+    const dailyData = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
+
+    dailyData.forEach(day => {
+      const date = new Date(day.dt_txt).toDateString();
+      const temp = Math.round(day.main.temp);
+      const desc = day.weather[0].description;
+      const icon = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+
+      forecastSection.innerHTML += `
+        <div>
+          <h4>${date}</h4>
+          <img src="${icon}" alt="${desc}">
+          <p>${desc}, ${temp}°F</p>
+        </div>
+      `;
+    });
+  });

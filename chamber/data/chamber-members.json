@@ -4,7 +4,7 @@
     "address": "101 Main St, Ranches",
     "phone": "503-2222-1111",
     "website": "https://sunrisecafe.sv",
-    "image": "sunrise-cafe.jpg",
+    "image": "cafe.webp",
     "membership": "Gold"
   },
   {
@@ -12,7 +12,7 @@
     "address": "202 Market Ave, Cedar Valley",
     "phone": "503-2222-2222",
     "website": "https://ecoprint.sv",
-    "image": "ecoprint.jpg",
+    "image": "printing.webp",
     "membership": "Silver"
   },
   {
@@ -20,7 +20,7 @@
     "address": "303 Fashion Blvd, City Center",
     "phone": "503-2222-3333",
     "website": "https://bellaboutique.sv",
-    "image": "bella.jpg",
+    "image": "boutique.webp",
     "membership": "Bronze"
   },
   {
@@ -28,7 +28,7 @@
     "address": "404 Innovation Way, Pionnier City",
     "phone": "503-2222-4444",
     "website": "https://technova.sv",
-    "image": "technova.jpg",
+    "image": "tech.webp",
     "membership": "Gold"
   },
   {
@@ -36,7 +36,7 @@
     "address": "505 Garden Rd, Pionnier Crossing",
     "phone": "503-2222-5555",
     "website": "https://greenleaf.sv",
-    "image": "greenleaf.jpg",
+    "image": "landscape.webp",
     "membership": "Silver"
   },
   {
@@ -44,7 +44,7 @@
     "address": "606 Wellness St, Ranches",
     "phone": "503-2222-6666",
     "website": "https://smfitness.sv",
-    "image": "fitness.jpg",
+    "image": "fitness.webp",
     "membership": "Bronze"
   },
   {
@@ -52,7 +52,7 @@
     "address": "707 Justice Ave, City Center",
     "phone": "503-2222-7777",
     "website": "https://vistalegal.sv",
-    "image": "vistalegal.jpg",
+    "image": "legal.webp",
     "membership": "Gold"
   }
 ]
