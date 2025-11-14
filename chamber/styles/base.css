@@ -210,20 +210,16 @@ main {
 footer {
     background-color: #7B4019; 
     color:  #FFFFFF; 
-    text-align: center;
-    padding: 1rem 10px;
-    font-family: 'Open Sans', sans-serif; 
-    margin-top: auto;
-    width: 100%;
-
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
 }
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space between;
-    align-items: center;
-    /**display: grid;
+    gap: 2rem;    /**display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
