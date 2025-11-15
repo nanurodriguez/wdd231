@@ -1,0 +1,193 @@
+/********CHAMBER OF COMMERCE SITE*************/
+
+@media only screen and (min-width: 38rem) {
+
+/************** Header Styles for larger screens ****************/
+    header, main, footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header {
+    display: grid;
+    grid-template-columns: 300px auto 1fr;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    }
+    header span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        
+    }
+    /************** Navigation Bar Styles for larger screens ****************/
+    .hamburger {
+        display: none;
+    }
+    .nav-bar{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+    }
+    .navigation {
+        display: block;
+    }
+    .navigation ul {
+        display:flex;
+        justify-content: center;
+    }
+    .navigation ul li {
+        margin: 0 25px;
+    }
+
+    /**************Main Styles for larger screens****************/
+    main {
+        max-width: 1400px;
+        display: grid;
+        /* Use auto-sized rows so main only takes the space its content needs
+           (fractional rows like 1fr/3fr force the grid to stretch)!!! IMPORTANT! */
+        grid-auto-rows: auto;
+        gap: 10px;
+        margin: 0 auto;
+    }
+    div.cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .cards {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+
+    }
+
+/************** Footer  ****************/
+    footer {
+        padding: 10px;
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-content {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas:
+        "social"
+        "mission"
+        "contact"
+        "links"
+        "newsletter";
+    gap: 0.04rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #7B4019;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.social-media {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.social-media img.logo {
+    grid-column: 1;
+}
+
+.social-media span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    grid-column: 2;
+}
+.social-icons{
+    grid-column: 3;
+    gap: 0.5rem;
+}
+
+.footer-content > p {
+    text-align: center;
+    font-style: italic;
+    padding: 1rem 1rem;
+}
+
+.contact-us {
+    grid-area: contact;
+    text-align: center;
+}
+
+.quick-links {
+    grid-area: links;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.quick-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.quick-links li a:hover {
+    color: #FFEEA9;
+}
+
+.newsletter {
+    grid-area: newsletter;
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5rem;
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+#subscribe-footer {
+    padding: 0.5rem 1rem;
+    background-color: #FFEEA9;
+    color: #7B4019;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about-me {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #FFEEA9;
+    margin-top: 2rem;
+}
+
+
+
+
+}

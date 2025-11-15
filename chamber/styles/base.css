@@ -252,7 +252,6 @@ footer span {
     font-size: 0.8em;
     font-weight: bold;
     color:  #FFFFFF;
-    color: #FFFFFF;
     transition: color 0.3s ease;
 
 
@@ -266,7 +265,6 @@ footer span {
 }
 /****newsletter****/
 .newsletter input[type="email"] {
-
     padding: 0.5rem;
     width: 100%;
     max-width: 250px;
@@ -274,11 +272,20 @@ footer span {
     border: none;
     border-radius: 4px;
 }
+.newsletter {
+    text-align: center;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+.newsletter p {
+    margin: 0.5rem 0 0.5rem 0;
+}
 
 #subscribe-footer {
 
     padding: 0.5rem 1rem;
-    background-color: #FFEEA9;
+    background-color: #FFFFFF;
     color: #7B4019;
     border: none;
     border-radius: 4px;
@@ -288,10 +295,10 @@ footer span {
 
 /*****about me****/
 .about-me {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  color: #FFEEA9;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #FFEEA9;
 }
 
 
@@ -304,22 +311,22 @@ footer span {
     flex: 1 0 auto;
 }
 .view-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .view-toggle button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: 2px solid #793f09;
-background-color: #FFEEA9;
-color: #7B4019;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #793f09;
+    background-color: #FFEEA9;
+    color: #7B4019;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .view-toggle button:hover,
@@ -330,7 +337,7 @@ outline: none;
 }
 
 .view-toggle button:active {
-  transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 
@@ -364,11 +371,21 @@ main {
     gap: 1rem;
     padding: 1rem;
 }
+.members-container.grid a {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:  #7B4019;
+    transition: color 0.3s ease;
+}
 
 /****Member Cards***/
 
 .member-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -376,13 +393,13 @@ main {
 
 
 .member-card img {
-  width: 100%;
-  height: auto;
-  max-height: 200px; /* limits vertical space - adjust as needed ok!!*/
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* limits vertical space - adjust as needed ok!!*/
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /******************Buttons*************/
