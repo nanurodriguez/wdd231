@@ -1,5 +1,5 @@
 //This code will be used to display the chamber members on the chamber directory page. It will async fetch and toggle view of these members in the DIRECTORY page.
-const url = 'data/chamber-members.json';
+const url = 'data/members.json';
 
 const container = document.querySelector('#membersContainer');
 const gridBtn = document.querySelector('#gridView');
