@@ -79,7 +79,7 @@ header span {
     background: none;
     border: none;
     font-size: 2em;
-    color: #3A3A3A;
+    color: #FFFFFF;
     cursor: pointer;
     padding-left: 10px;
     padding-right: 10px;
@@ -112,10 +112,10 @@ header span {
 .navigation a {
     display: block;
     text-decoration: none;
-    color: #3A3A3A;
+    color: #7B4019;
     padding: 0.8rem 10px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 .navigation a:hover {
     color: #7B4019;
@@ -143,68 +143,7 @@ header span {
     color: #7B4019;
     font-weight: bold;
 }
-/********************Main Content*********************/
 
-main {
-    padding: 20px;
-    font-family: 'Open Sans', sans-serif;
-    min-width: 320px;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    flex: 1 0 auto;
-}
-
-/******************Member directory cards**********************/
-.members-container.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-.members-container.list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.member-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/******************Buttons*************/
-.view-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    gap: 1rem;
-}
-.view-toggle button {
-    background-color: #7B4019; 
-    color:  #FFFFFF; 
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 10px;
-}
-.view-toggle button:hover {
-    background-color: #FFEEA9;
-    color: #7B4019;
-    font-weight: bold;
-}
 
 /***************Footer*******************/
 footer {
@@ -218,7 +157,7 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space between;
+    justify-content: space-between;
     gap: 2rem;    /**display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -228,6 +167,11 @@ footer {
     font-size: 0.8em;
     flex-shrink: 0; **/
 }
+.footer-content > div {
+    flex: 1 1 250px;
+    min-width: 200px;
+}
+
 #footer-logo {
     max-width: 100px;
     margin-bottom: 10px;
@@ -241,26 +185,31 @@ footer span {
     font-weight: bold;
     color:  #FFFFFF;    
 }
-
+/***********Social media icons************/
 .footer-content .social-media img {
     min-width: 30px;
     min-height: 30px;
-    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
     padding: 10px;
 }
 
 .social-media {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    text-align: center;
 }
+.social-media p {
+    margin: 0.5rem 0;
+    max-width: 300px;
+}
+
 
 .social-media a:hover {
     filter: brightness(0) saturate(100%) invert(26%) sepia(27%) saturate(468%) hue-rotate(97deg) brightness(91%) contrast(88%);
 }
+
+/***contact-us***/
+
 .contact-us {
     text-align: center;
     padding-bottom: 10px;
@@ -268,10 +217,14 @@ footer span {
     font-weight: bold;
     color:  #FFFFFF;    
 }
+
+/****quick-links****/
+
 .quick-links {
     text-align: center;
     padding-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 1rem;
+    line-height: 1.5;
     font-weight: bold;
     color:  #FFFFFF; 
     text-decoration: none;
@@ -279,20 +232,70 @@ footer span {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
 }
+.quick-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+.quick-links li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 .quick-links a {
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:  #FFFFFF;
     color: #FFFFFF;
+    transition: color 0.3s ease;
+
+
+}
+.quick-links a:visited {
+    color: #fa8c59;
 }
 .quick-links a:hover {
     color: #FFEEA9;
     font-weight: bold;  
 }
+/****newsletter****/
+.newsletter input[type="email"] {
 
-/***************Directory Styles***************/
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+#subscribe-footer {
+
+    padding: 0.5rem 1rem;
+    background-color: #FFEEA9;
+    color: #7B4019;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*****about me****/
+.about-me {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #FFEEA9;
+}
+
+
+/***************Directory EXCLUSIVE Styles***************/
 .members-container {
     display: flex;
     flex-direction: column;
@@ -330,7 +333,47 @@ outline: none;
   transform: scale(0.98);
 }
 
+
+
+/********************Main Content*********************/
+
+main {
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 320px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex: 1 0 auto;
+}
+
+/******************Member directory cards**********************/
+.members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.members-container.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
 /****Member Cards***/
+
+.member-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 
 .member-card img {
   width: 100%;
@@ -340,4 +383,30 @@ outline: none;
   border-radius: 6px;
   margin-bottom: 0.75rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/******************Buttons*************/
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+.view-toggle button {
+    background-color: #7B4019; 
+    color:  #FFFFFF; 
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+}
+.view-toggle button:hover {
+    background-color: #FFEEA9;
+    color: #7B4019;
+    font-weight: bold;
 }
