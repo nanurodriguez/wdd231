@@ -53,23 +53,11 @@ header {
     text-align: center;
     font-family: 'Montserrat', sans-serif; 
 }
-header img {
-    display: block;
-    width: 100px;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
-    object-fit: cover;
-    padding-bottom: 0;
-    min-width: 40px;
-    max-width: 100px;
-}
+
 header span {
-    align-self: center;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color:  #FFFFFF;
-    padding-left:100px;
 } 
 
 /***************Hamburger button*******************/
