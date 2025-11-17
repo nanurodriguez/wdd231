@@ -45,20 +45,31 @@ body {
 }
 
 header {
-    display: grid;
-    grid-template-columns: 24px auto 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 1rem 0.3rem 1rem;
     background-color: #7B4019; 
     color:  #FFFFFF; 
-    padding: 5px 10px 5px 5px;
-    text-align: center;
     font-family: 'Montserrat', sans-serif; 
 }
-
-header span {
+.title {
+    display: flex;
+    align-items: center;
+}
+.title span {
     font-size: 1.5em;
     font-weight: bold;
     color:  #FFFFFF;
+    padding-left: 1rem;
 } 
+.title img {
+    width: 150px;
+    height: auto;
+    padding-top: 7px;
+    min-width: 40px;
+}
+
 
 /***************Hamburger button*******************/
 
@@ -105,7 +116,7 @@ header span {
     transition: color 0.3s ease;
 }
 .navigation a:hover {
-    color: #7B4019;
+    color: #c5733c;
 }
 
 .navigation li.visited {

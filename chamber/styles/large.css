@@ -1,46 +1,58 @@
-/********CHAMBER OF COMMERCE SITE*************/
+/********CHAMBER OF COMMERCE SITE LARGE VIEW*************/
 
 @media only screen and (min-width: 38rem) {
 
-/************** Header Styles for larger screens ****************/
+/************** Header Styles ****************/
     header, main, footer {
         width: 100%;
         margin: 0 auto;
     }
     header {
-    display: grid;
-    grid-template-columns: 300px auto 1fr;
-    padding: 0.3rem 1rem 0.3rem 1rem;
-    }
-    header span {
         display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 2rem;
-        
+        justify-content: space-between;
+        padding: 0.3rem 1rem 0.3rem 1rem;
+        background-color: #7B4019; 
+        color:  #FFFFFF;
+        font-family: 'Montserrat', sans-serif; 
     }
-    /************** Navigation Bar Styles for larger screens ****************/
+    .title {
+        display: flex;
+        align-items: center;
+    }
+    .title span {
+        font-size: 2em;
+        font-weight: bold;
+        color:  #FFFFFF;
+        padding-left: 1rem;
+    } 
+    .title img {
+        width: 150px;
+        height: auto;
+        padding-top: 7px;
+        min-width: 40px;
+    }
+
+    /************** Navigation Bar****************/
     .hamburger {
         display: none;
     }
-    .nav-bar{
+    .navigation{
         display:flex;
         justify-content: center;
         align-items: center;
-        max-width: 600px;
-    }
-    .navigation {
-        display: block;
+        max-width: 700px;
+        flex: 1 1 auto;
+        margin: 0 auto;
+
     }
     .navigation ul {
         display:flex;
         justify-content: center;
     }
-    .navigation ul li {
-        margin: 0 25px;
-    }
 
-    /**************Main Styles for larger screens****************/
+
+    /**************Main Styles****************/
     main {
         max-width: 1400px;
         display: grid;
@@ -50,6 +62,7 @@
         gap: 10px;
         margin: 0 auto;
     }
+    /***********DIRECTORY ONLY********`**********/
     div.cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -64,6 +77,19 @@
         padding-top: 0;
 
     }
+    
+    .members-container.list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex: 1 0 auto;
+        gap: 1rem;
+        padding: 1rem;
+        width: 200px;
+        margin: 0 auto; 
+    }
+
 
 /************** Footer  ****************/
     footer {
