@@ -1,65 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home page of the Eagle Mountain Chamber of Commerce, displaying the weather data of Eagle Mountain and  providing current information of the Chamber of Commerce and events">
-    <meta name="keywords" content="Eagle Mountain Chamber of Commerce, directory, membership, events, resources">
-    <meta name="author" content="Nancy Bell">
-    <meta name="robots" content="index,follow">
-    <meta name="theme-color" content="#7B4019">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Home page of the Eagle Mountain Chamber of Commerce, displaying the weather data of Eagle Mountain and  providing current information of the Chamber of Commerce and events">
+        <meta name="keywords" content="Eagle Mountain Chamber of Commerce, homepage, home, weather, membership, events, resources">
+        <meta name="author" content="Nancy Bell">
+        <meta name="robots" content="index,follow">
+        <meta name="theme-color" content="#7B4019">
 
-    <meta property="og:title" content="Eagle Mountain Chamber of Commerce">
-    <meta property="og:description" content="Home page of the Eagle Mountain Chamber of Commerce, displaying the weather data of Eagle Mountain and  providing current information of the Chamber of Commerce and events">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/chamber-logo.svg">
-    <meta property="og:url" content="https://example.com/chamber/index.html">
+        <meta property="og:title" content="Eagle Mountain Chamber of Commerce">
+        <meta property="og:description" content="Home page of the Eagle Mountain Chamber of Commerce, displaying the weather data of Eagle Mountain and  providing current information of the Chamber of Commerce and events">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="images/chamber-logo.svg">
+        <meta property="og:url" content="https://example.com/chamber/index.html">
 
-    <link rel="canonical" href="https://example.com/chamber/index.html">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
 
-    <script defer src="scripts/navigation.js"></script>
-    <script defer src="scripts/join.js"></script>
-    <script type="module" src="scripts/forecast.mjs"></script>
-    <script defer src="scripts/dates.js"></script>
-    <script defer src="scripts/newsletter.js"></script>
+        <script defer src="scripts/navigation.js"></script>
+        <script defer src="scripts/join.js"></script>
+        <script type="module" src="scripts/forecast.mjs"></script>
+        <script defer src="scripts/dates.js"></script>
+        <script defer src="scripts/newsletter.js"></script>
 
-    <title>Home - Eagle Mountain Chamber of Commerce</title>
+        <title>Home - Eagle Mountain Chamber of Commerce</title>
 
-</head>
-<body>
-    <header>
-        <img src="images/chamber-logo.svg" alt="Eagle Mountain Chamber of Commerce Logo" class="logo" width="100px" height="100px">
-        <span>Eagle Mountain Chamber of Commerce</span>
-        <button id="ham-button" class="hamburger" aria-label="navigation"></button>
-    </header>
-    <nav id="nav-bar" class="navigation">
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="#">Membership</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Resources</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="hero">
-            <img src="images/hero-image.jpg" alt="Eagle Mountain Chamber of Commerce">
-            <h1>Chamber of Commerce</h1>
-            <p>Building a thriving business community through connection, support, and shared success.</p>
-            <a href="directory.html" class="join-button">Join Now</a>
-        </section>
-        <section class="forecast" id="forecast">=
-            <!--the weather data will go here-->
-            <p id="error-message" style="color: red;"></p>
-        </section>
-    </main>
-    <footer>
-        <div class="social-media">
-            <a href="https://www.facebook.com/profile.php?id=61572028127332" target="_blank"><img src="images/facebook.svg" alt="Facebook Icon" width="20" height="20"></a>
-            <a href="https://www.instagram.com/nancybellweb/" target="_blank"><img src="images/instagram.svg" alt="Instagram Icon" width="20" height="20"></a>
-            <a href="https://www.linkedin.com/in/nancybellweb/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" width="20" height="20"></a>
-        </div>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <a href="index.html"><img src="images/chamber-logo.svg" alt="Eagle Mountain Chamber of Commerce Logo" class="logo" width="100" height="100"></a>
+                <span>Eagle Mountain Chamber of Commerce</span>
+            </div>
+            <button id="ham-button" class="hamburger" aria-label="navigation"></button>
+        </header>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="directory.html" aria-current="page">Directory</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button id="join-button" class="join-button">Join Now</button>
+        </nav>
+        <main>
+            <section class="hero">
+                <img src="images/hero-image.jpg" alt="Eagle Mountain Chamber of Commerce">
+                <h1>Chamber of Commerce</h1>
+                <p>Building a thriving business community through connection, support, and shared success.</p>
+                <a href="directory.html" class="join-button">Join Now</a>
+            </section>
+            <section id="home" class="home">
+                <p>Join the Eagle Mountain Chamber of Commerce and connect with local businesses, access valuable resources, and be part of a vibrant entrepreneurial ecosystem driving economic growth in our community.</p>
+                <button id="join-button" class="join-button">Become a Member (arrow)</button>
+                <button id="discover-button" class="discover-button">Discover (arrow)</button>
+                <div class="home-cards">
+                    <div class="people">
+                        <img src="images/people-icon.jpg" alt="people icon of people">
+                        <h2>500+ Members</h2>
+                        <p>Growing business network</p>
+                    </div>
+                    <div class="chart">
+                        <img src="images/chart-icon.jpg" alt="chart icon showing economic growth">
+                        <h3>Economic Growth</h3>
+                        <p>Supporting local businesses</p>
+                    </div>
+                    <div>
+                        <img src="images/hands-icon.jpg" alt="heart icon of handshake between two people">
+                        <h4>100+ Events</h4>
+                        <p>Annual networking opportunities</p>
+                    </div>
+
+                </div>
+            </section>
+            <section id="about"  class="about">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>The Eagle Mountain Chamber of Commerce serves as a resource hub for businesses, providing information on local events, hosting networking opportunities, creating business directories, and encouraging local shopping.</p>
+                </div>
+                <div class="mission-cards">
+                    <div class="empower-card">
+                        <img src="images/target-icon.jpg" alt="target icon targeting people, simple and clean icon of a target in a circle">
+                        <h3>Empower Member Engagement</h3>
+                        <p>Deliver meaningful resources, dinamic networking events, and ongoing support to help members thrive professionally and personally.</p>
+                    </div>
+                    <div class="elevate-card">
+                        <img src="images/anouncement-icon.jpg" alt="icon of a microphone to call people out, clean and simple">
+                        <h4>Elevate the Chamber's Influence</h4>
+                        <p>Position the Chamber as a trusted voice and authoritative resource in local business affairs, advocacy, and community leadership.</p>
+                    </div>
+                    <div class="catalyze-card">
+                        <img src="images/spaceship-icon.jpg" alt="icon of a spaceship, simple and clean">
+                        <h5>Elevate the Chamber's Influence</h5>
+                        <p>Attract new businesses and entrepreneurs by showcasing Eagle Mountain as a vibrant, opportunity-rich community for investment and innovation..</p>
+                    </div>
+                    <div class="ignite-card">
+                        <img src="images/light-icon.jpg" alt="icon of a light bulb, clean strokes and simple.">
+                        <h6>Ignite Community Entrepreneurship</h6>
+                        <p>Attract new businesses and entrepreneurs by showcasing Eagle Mountain as a vibrant, opportunity-rich community for investment and innovation..</p>
+                    </div>
+            </section>
+            <section class="forecast" id="forecast">=
+                <!--the weather data will go here-->
+                <p id="error-message" style="color: red;"></p>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="index.html"><img id="footer-logo" src="images/chamber-logo.svg" alt="Eagle Mountain Chamber of Commerce Logo" class="logo" width="100" height="100"></a>
+                    <span>Eagle Mountain Chamber of Commerce</span>
+                    <div class="social-icons">
+                        <a href="https://x.com/" target="_blank"><img src="images/x-twitter.svg" alt="X Twitter Icon"  width="50" height="50"></a>
+                        <a href="https://www.linkedin.com/in/nancybellweb/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" width="50" height="50"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572028127332" target="_blank"><img src="images/facebook.svg" alt="Facebook Icon" width="50" height="50"></a>
+                        <a href="https://www.instagram.com/nancybellweb/" target="_blank"><img src="images/instagram.svg" alt="Instagram Icon" width="50" height="50"></a>
+                    </div>
+                </div>
+                <p>"Building a thriving business community through connection, support, and shared success"</p>
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <p>123 Main Street, Eagle Mountain, Utah</p>
+                    <p>Tel: 123-456-7890</p>
+                    <p>Email: info@emchamber.org</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="current"><a href="directory.html">Directory</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h5>Newsletter</h5>
+                    <input type="email" placeholder="Your email">
+                    <button id="subscribe-footer">Subscribe</button>
+                </div>
+                <p>Stay updated with the latest news, events, and opportunities.</p>
+                <div class="about-me">
+                <p>&copy; <span id="myName"></span> Eagle Mountain Chamber of Commerce | Nancy Bell | WDD 231 Project</p>
+                <p id="currentYear" class="currentYear"></p>
+                <p id="lastModified" class="lastModified">Last Modified</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
 
