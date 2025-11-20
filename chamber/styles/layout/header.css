@@ -55,11 +55,7 @@ header {
 .navigation.show {
     display: block;
 }
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+
 .navigation li {
     margin: 10px 0;
 }

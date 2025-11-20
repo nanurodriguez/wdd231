@@ -49,6 +49,7 @@
     .navigation ul {
         display:flex;
         justify-content: center;
+        font-size: 1.2rem;
     }
 
 

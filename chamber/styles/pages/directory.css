@@ -1,42 +1,14 @@
+
+
 /***************Directory EXCLUSIVE Styles***************/
-.members-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    flex: 1 0 auto;
-}
+
+
 .view-toggle {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
-
-.view-toggle button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 2px solid #793f09;
-    background-color: #FFEEA9;
-    color: #7B4019;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.view-toggle button:hover,
-.view-toggle button:focus {
-background-color: #7B4019;
-color: #FFEEA9;
-outline: none;
-}
-
-.view-toggle button:active {
-    transform: scale(0.98);
-}
-
-
 
 /********************Main Content*********************/
 
@@ -60,9 +32,6 @@ main {
     padding: 1rem;
 }
 .members-container.grid a, .members-container.list a {
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
@@ -106,8 +75,6 @@ main {
     justify-content: center;
     margin-bottom: 1rem;
     gap: 1rem;
-    background-color: #7B4019; 
-    color:  #FFFFFF; 
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -118,8 +85,13 @@ main {
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
 }
-.view-toggle button:hover {
-    background-color: #FFEEA9;
-    color: #7B4019;
-    font-weight: bold;
+.view-toggle button:hover,
+.view-toggle button:focus {
+    background-color: #7B4019;
+    color: #FFEEA9;
+    outline: none;
+}
+
+.view-toggle button:active {
+    transform: scale(0.98);
 }
