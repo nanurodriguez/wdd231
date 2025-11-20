@@ -5,20 +5,21 @@ const url = 'https://api.openweathermap.org/data/2.5/forecast?lat={40.3147}&lon=
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    const forecastSection = document.getElementById('#forecast');
+    const forecastDiv = document.getElementById('forecast');
     const dailyData = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
 
     dailyData.forEach(day => {
-      const date = new Date(day.dt_txt).toDateString();
+      const date = new Date(day.dt_txt).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
       const temp = Math.round(day.main.temp);
       const desc = day.weather[0].description;
       const icon = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
 
-      forecastSection.innerHTML += `
-        <div>
+      forecastDiv.innerHTML += `
+        <div class="day">
           <h4>${date}</h4>
           <img src="${icon}" alt="${desc}">
-          <p>${desc}, ${temp}°F</p>
+          <p>${desc}</p>
+          <p><strong>${temp}°F</strong></p>
         </div>
       `;
     });

@@ -54,7 +54,7 @@
 
     /**************Main Styles****************/
     main {
-        max-width: 1400px;
+        width: 100%;
         display: grid;
         /* Use auto-sized rows so main only takes the space its content needs
            (fractional rows like 1fr/3fr force the grid to stretch)!!! IMPORTANT! */
@@ -102,118 +102,212 @@
         align-items: center;
     }
     .footer-content {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-areas:
-        "social"
-        "mission"
-        "contact"
-        "links"
-        "newsletter";
-    gap: 0.04rem;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    background-color: #7B4019;
-    color: #fff;
-    box-sizing: border-box;
-}
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-areas:
+            "social"
+            "mission"
+            "contact"
+            "links"
+            "newsletter";
+        gap: 0.04rem;
+        max-width: 1800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        background-color: #7B4019;
+        color: #fff;
+        box-sizing: border-box;
+    }
 
-.social-media {
-    grid-area: social;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-    padding-bottom: 0;
-}
+    .social-media {
+        grid-area: social;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        padding-bottom: 0;
+    }
 
-.social-media img.logo {
-    grid-column: 1;
-}
+    .social-media img.logo {
+        grid-column: 1;
+    }
 
-.social-media span {
-    font-size: 1.2rem;
-    font-weight: bold;
-    grid-column: 2;
-}
-.social-icons{
-    grid-column: 3;
-    gap: 0.5rem;
-}
+    .social-media span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        grid-column: 2;
+    }
+    .social-icons{
+        grid-column: 3;
+        gap: 0.5rem;
+    }
 
-.footer-content > p {
-    text-align: center;
-    font-style: italic;
-    padding: 1rem 1rem;
-}
+    .footer-content > p {
+        text-align: center;
+        font-style: italic;
+        padding: 1rem 1rem;
+    }
 
-.contact-us {
-    grid-area: contact;
-    text-align: center;
-}
+    .contact-us {
+        grid-area: contact;
+        text-align: center;
+    }
 
-.quick-links {
-    grid-area: links;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    text-align: center;
-}
+    .quick-links {
+        grid-area: links;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+    }
 
-.quick-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+    .quick-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 
-.quick-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-}
+    .quick-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+    }
 
-.quick-links li a:hover {
-    color: #FFEEA9;
-}
+    .quick-links li a:hover {
+        color: #FFEEA9;
+    }
 
-.newsletter {
-    grid-area: newsletter;
-    text-align: center;
-}
+    .newsletter {
+        grid-area: newsletter;
+        text-align: center;
+    }
 
-.newsletter input[type="email"] {
-    padding: 0.5rem;
-    max-width: 250px;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    border: none;
-    border-radius: 4px;
-}
+    .newsletter input[type="email"] {
+        padding: 0.5rem;
+        max-width: 250px;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        border: none;
+        border-radius: 4px;
+    }
 
-#subscribe-footer {
-    padding: 0.5rem 1rem;
-    background-color: #FFEEA9;
-    color: #7B4019;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-}
+    #subscribe-footer {
+        padding: 0.5rem 1rem;
+        background-color: #FFEEA9;
+        color: #7B4019;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-.about-me {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #FFEEA9;
-    margin-top: 2rem;
-}
+    .about-me {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #FFEEA9;
+        margin-top: 2rem;
+    }
+
+    /**Home Styles LARGE SCREENS**/
 
 
+    /**hERO**/
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #eeeadc;
+        border-radius: 4px;
+        width: 100%;
+        overflow: hidden; 
+        padding: 20px;
 
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 0.75rem;
+        box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
+    }
+    .hero h2 {
+        font-size: 2.6rem;
+        margin-bottom: 1rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        font-style: italic;
+    }
+
+    /**HOME**/
+    .home {
+        padding: 20px
+    }
+    .home-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .network img, .growth img, .events img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    .network h3, .growth h3, .events h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #7B4019;
+    }
+
+
+    /**ABOUT CARDS**/
+    .about-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .mission {
+        margin: 10px;
+        padding: 20px;
+    }
+    .mission h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #7B4019;
+    }
+    .mission p {
+        font-size: 1rem;
+        color: #7B4019;
+        font-style: italic;
+    }
+
+    
+    .about-cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .mission-cards h2, .mission-cards h3, .mission-cards h4, .mission-cards h5, .mission-cards h6 {
+        font-size: 1.5rem;
+    }
+    .mission-cards p {
+        font-size: 1.0rem;
+    }
 
 }

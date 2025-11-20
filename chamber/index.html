@@ -50,27 +50,32 @@
         </nav>
         <main>
             <section class="hero">
-                <img src="images/hero.webp" alt="Image representing the land of Eagle Mountain" width="auto" height="auto">
-                <h1>Chamber of Commerce</h1>
+                <img src="images/hero.webp" alt="Image representing the land of Eagle Mountain" width="auto" height="auto" loading= "lazy"> 
+                <h1> Eagle Mountain Chamber of Commerce</h1>
                 <p>Building a thriving business community through connection, support, and shared success.</p>
                 <a href="directory.html" class="join-button">Join Now</a>
             </section>
             <section id="home" class="home">
-                <p>Join the Eagle Mountain Chamber of Commerce and connect with local businesses, access valuable resources, and be part of a vibrant entrepreneurial ecosystem driving economic growth in our community.</p>
-                <button id="join-button" class="join-button">Become a Member <img src="images/arrow.svg" alt="arrow pointing right" width="20" height="20"></button>
-                <button id="discover-button" class="join-button">Discover <img src="images/arrow.svg" alt="arrow pointing right" width="20" height="20"></button>
+                
+                <p>"Join the Eagle Mountain Chamber of Commerce and connect with local businesses, access valuable resources, and be part of a vibrant entrepreneurial ecosystem driving economic growth in our community."</p>
+
+                <div class="home-buttons">
+                    <button id="join-button" class="join-button">Become a Member <img src="images/arrow.svg" alt="arrow pointing right" width="20" height="20"></button>
+                    <button id="discover-button" class="join-button">Explore Resources<img src="images/arrow.svg" alt="arrow pointing right" width="20" height="20"></button>
+                </div>
+
                 <div class="home-cards">
-                    <div class="people">
+                    <div class="network">
                         <img src="images/people-icon.svg" alt="people icon of people" width="24" height="24">
                         <h2>500+ Members</h2>
                         <p>Growing business network</p>
                     </div>
-                    <div class="chart">
+                    <div class="growth">
                         <img src="images/chart-icon.svg" alt="chart icon showing economic growth" width="24" height="24">
                         <h3>Economic Growth</h3>
                         <p>Supporting local businesses</p>
                     </div>
-                    <div>
+                    <div class= events>
                         <img src="images/hands-icon.svg" alt="heart icon of handshake between two people" width="24" height="24">
                         <h4>100+ Events</h4>
                         <p>Annual networking opportunities</p>
@@ -78,7 +83,7 @@
 
                 </div>
             </section>
-            <section id="about"  class="about">
+            <section id="about-cards"  class="about-cards">
                 <div class="mission">
                     <h2>Our Mission</h2>
                     <p>The Eagle Mountain Chamber of Commerce serves as a resource hub for businesses, providing information on local events, hosting networking opportunities, creating business directories, and encouraging local shopping.</p>
@@ -104,10 +109,11 @@
                         <h6>Ignite Community Entrepreneurship</h6>
                         <p>Attract new businesses and entrepreneurs by showcasing Eagle Mountain as a vibrant, opportunity-rich community for investment and innovation..</p>
                     </div>
+                </div>
             </section>
-            <section class="forecast" id="forecast">=
+            <section class="forecast" id="forecast">
                 <!--the weather data will go here-->
-                <p id="error-message" style="color: red;"></p>
+                <p id="error-message" style="color: red;">Error Displaying Weather</p>
             </section>
         </main>
         <footer>
