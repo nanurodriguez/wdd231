@@ -17,14 +17,11 @@
 
 }
 .hero img {
-    width: 100%;
-    height: auto;
     max-height: 400px; 
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 0.75rem;
     box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
-    object-fit: cover;
     }
 .hero p {
     width: 100%;

@@ -37,9 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif;
-    font-weight: 423;
-    min-width: 320px;
-}
+    font-weight: 423;}
 
 .navigation ul {
     list-style-type: none;
