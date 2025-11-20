@@ -1,0 +1,99 @@
+/***************HEADER*******************/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    background-color: #7B4019; 
+    color:  #FFFFFF; 
+    font-family: 'Montserrat', sans-serif; 
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:  #FFFFFF;
+    padding-left: 1rem;
+} 
+.title img {
+    width: 150px;
+    height: auto;
+    padding-top: 7px;
+    min-width: 40px;
+}
+
+
+/***************Hamburger button*******************/
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hamburger::before {
+    content: '\2630'; 
+}
+
+.hamburger.show::before {
+    content: '\00D7'; 
+}
+
+/***************Navigation*******************/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation li {
+    margin: 10px 0;
+}
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: #7B4019;
+    padding: 0.8rem 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navigation a:hover {
+    color: #c5733c;
+}
+
+.navigation li.visited {
+    text-decoration: underline;
+    color: #7B4019;
+}
+.join-button {
+    border-radius: 10px;
+    background-color: #7B4019; 
+    color:  #FFFFFF; 
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.join-button:hover {
+    background-color: #FFEEA9;
+    color: #7B4019;
+    font-weight: bold;
+}
