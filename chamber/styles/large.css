@@ -309,5 +309,14 @@
     .mission-cards p {
         font-size: 1.0rem;
     }
+    /**forecast**/
+    #forecast {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        max-width: 800px;
+        justify-items: center;
+        margin: 0 auto;
+    }
 
 }

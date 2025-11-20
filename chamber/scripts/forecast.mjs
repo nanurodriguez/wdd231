@@ -1,8 +1,15 @@
 
-const url = 'https://api.openweathermap.org/data/2.5/forecast?lat={40.3147}&lon={-112.0069}&appid={fca515f35a96678f2eca2aafa881bc1Y}&units=imperial';
+
+
+
 // Forecast today, tomorrow, and day after tomorrow forecast in the home page index
 
-fetch(url)
+
+const apiKey = '2fca515f35a96678f2eca2aafa881bc1';
+const lat = 40.3147;
+const lon = -112.0069;
+
+fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
   .then(response => response.json())
   .then(data => {
     const forecastDiv = document.getElementById('forecast');
