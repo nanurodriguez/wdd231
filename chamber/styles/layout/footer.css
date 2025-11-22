@@ -25,7 +25,7 @@ footer p {
     font-size: 1.5em;
     font-weight: bold;
 }
-/***********Social media icons************/
+
 .social-icons img {
     padding: 10px;
 }
@@ -35,51 +35,16 @@ footer p {
     filter: brightness(0) saturate(100%) invert(26%) sepia(27%) saturate(468%) hue-rotate(97deg) brightness(91%) contrast(88%);
 }
 
-/***contact-us***/
 
-.contact-us {
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 0.8em;
-    font-weight: bold;
-    color:  #FFFFFF;    
-}
-.contact-us h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #FFFFFF;
-}
-
-/****quick-links****/
 
 .quick-links {
     text-align: center;
-    padding-bottom: 10px;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: bold;
-    color:  #FFFFFF; 
-    text-decoration: none;
-    display: inline-block;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
 }
-.quick-links h3, .quick-links h4 {
+.contact-us>h2,.quick-links>h3, .newsletter h4 {
     font-size: 1em;
     margin-bottom: 10px;
     color: #FFFFFF;
-}
-.quick-links ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 0 10px 0;
-    text-align: center;
-}
-.quick-links li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
 }
 .quick-links a {
     text-decoration: none;
@@ -120,7 +85,6 @@ footer p {
 }
 
 #subscribe-footer {
-
     padding: 0.5rem 1rem;
     background-color: #FFFFFF;
     color: #7B4019;
@@ -130,10 +94,14 @@ footer p {
     cursor: pointer;
 }
 
-/*****about me****/
 .about-me {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.8rem;
     color: #FFEEA9;
+    font-size: 0.8rem;
+    padding: 2px;
+
+}
+.contact-us>p, .newsletter p, .newsletter h4  {
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0;
 }

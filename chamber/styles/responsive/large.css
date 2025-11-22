@@ -110,9 +110,6 @@
         grid-area: social;
         display: grid;
         grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 0.5rem;
-        text-align: center;
     }
 
     .social-media img.logo {
@@ -126,19 +123,18 @@
         grid-column: 3;
         gap: 0.rem;
     }
-
+    .social-media, .contact-us, .quick-links, .newsletter {
+        justify-self: center;
+        align-items: center;
+        gap: 0.5rem;
+        text-align: center;
+    }
     .contact-us {
         grid-area: contact;
-        text-align: center;
     }
 
     .quick-links {
         grid-area: links;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        text-align: center;
     }
 
     .quick-links ul {
@@ -150,11 +146,6 @@
         gap: 1rem;
     }
 
-    .quick-links li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-    }
 
     .quick-links li a:hover {
         color: #FFEEA9;
@@ -162,34 +153,8 @@
 
     .newsletter {
         grid-area: newsletter;
-        text-align: center;
     }
 
-    .newsletter input[type="email"] {
-        padding: 0.5rem;
-        max-width: 250px;
-        width: 100%;
-        margin-bottom: 0.5rem;
-        border: none;
-        border-radius: 4px;
-    }
-
-    #subscribe-footer {
-        padding: 0.5rem 1rem;
-        background-color: #FFEEA9;
-        color: #7B4019;
-        border: none;
-        border-radius: 4px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .about-me {
-        text-align: center;
-        font-size: 0.8rem;
-        color: #FFEEA9;
-        margin-top: 2rem;
-    }
 
     /**Home Styles LARGE SCREENS**/
 
