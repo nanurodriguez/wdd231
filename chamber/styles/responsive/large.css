@@ -137,20 +137,6 @@
         grid-area: links;
     }
 
-    .quick-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-
-    .quick-links li a:hover {
-        color: #FFEEA9;
-    }
-
     .newsletter {
         grid-area: newsletter;
     }
