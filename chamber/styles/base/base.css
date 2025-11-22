@@ -32,16 +32,30 @@ body {
     color:  #7B4019;
     margin: 0;
     padding: 0;
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
     font-family: "Roboto", sans-serif;
-    font-weight: 423;}
+    font-weight: 423;
+}
 
 .navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 8px;
+
 }
 
 
