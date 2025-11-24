@@ -1,6 +1,6 @@
 /********CHAMBER OF COMMERCE SITE LARGE VIEW*************/
 
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 39rem) {
 
 /************** Header Styles ****************/
     header, main, footer {
@@ -146,37 +146,20 @@
 
 
     /**hERO**/
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: #eeeadc;
-        border-radius: 4px;
-        width: 100%;
-        overflow: hidden; 
-        padding: 20px;
-
-    }
-
     .hero img {
-        width: 100%;
-        height: auto;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 4px;
-        margin-bottom: 0.75rem;
-        box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
+        max-height: 500px;
     }
-    .hero h2 {
-        font-size: 2.6rem;
-        margin-bottom: 1rem;
+    .hero h1 {
+        font-size: 3rem;
+        top: 30%;
+        left: 50%;
+        width: 80%;
+        padding-bottom: 5px;
     }
     .hero p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        font-style: italic;
+        top: 62%;
+        left: 50%;
+        font-size: 14px;
     }
 
     /**HOME**/
