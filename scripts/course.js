@@ -1,12 +1,12 @@
 // Course data array
 
 const courses = [
-    { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, description: 'Intro to programming.', completed: true },
-    { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, description: 'Web fundamentals.', completed: true },
-    { subject: 'CSE', number: 111, title: 'Programming with Functions', credits: 2, description: 'Functions and modular programming.', completed: true },
-    { subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 2, description: 'Intro to OOP.', completed: true },
-    { subject: 'WDD', number: 131, title: 'Dynamic Web Fundamentals', credits: 2, description: 'Dynamic web with JS.', completed: true },
-    { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, description: 'Frontend fundamentals and accessibility.', completed: false }
+    { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, description: 'Intro to programming.', completed: true , certificate: "Web & Computer Programming", technology: ["HTML", "CSS", "JavaScript"] },
+    { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, description: 'Web fundamentals.', completed: true, certificate:"Web & Computer Programming", technology: ["HTML", "CSS"] },
+    { subject: 'CSE', number: 111, title: 'Programming with Functions', credits: 2, description: 'Functions and modular programming.', completed: true, certificate:"Web & Computer Programming", technology: ["HTML", "CSS", "JavaScript"] },
+    { subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 2, description: 'Intro to OOP.', completed: true , certificate:"Web & Computer Programming", technology: ["HTML", "CSS", "JavaScript"] },
+    { subject: 'WDD', number: 131, title: 'Dynamic Web Fundamentals', credits: 2, description: 'Dynamic web with JS.', completed: true, certificate:"Web & Computer Programming", technology: ["HTML", "CSS", "JavaScript"] },
+    { subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2, description: 'Frontend fundamentals and accessibility.', completed: false , certificate:"Web & Computer Programming", technology: ["HTML", "CSS", "JavaScript"] }
 ];
 
 // DOM elements
@@ -55,6 +55,11 @@ function displayCourses(list) {
         meta.className = 'course-meta';
         article.appendChild(header);
         article.appendChild(meta);
+        
+
+        // Event listener for modal display
+        article.addEventListener('click', () => displayCourseDetails(course));
+
         courseCardsContainer.appendChild(article);
     });
 }
@@ -68,4 +73,38 @@ if (cseBtn) cseBtn.addEventListener('click', () => displayCourses(courses.filter
 displayCourses(courses);
 
 
+//Adding MODALS
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="close-modal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits:</strong> ${course.credits}</p>
+        <p><strong>Certificate:</strong> ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+
+    document.querySelector("#close-modal").addEventListener("click", () => {
+        courseDetails.close();
+    });
+
+    // Close when clicking outside
+    courseDetails.addEventListener("click", (event) => {
+        const rect = courseDetails.getBoundingClientRect();
+        const inside =
+            event.clientX >= rect.left &&
+            event.clientX <= rect.right &&
+            event.clientY >= rect.top &&
+            event.clientY <= rect.bottom;
+
+        if (!inside) {
+            courseDetails.close();
+        }
+    });
+}
 
