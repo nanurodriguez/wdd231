@@ -78,7 +78,7 @@ const courseDetails = document.querySelector("#course-details");
 
 function displayCourseDetails(course) {
     courseDetails.innerHTML = `
-        <button id="close-modal">❌</button>
+        <button id="close-modal"></button>
         <h2>${course.subject} ${course.number}</h2>
         <h3>${course.title}</h3>
         <p><strong>Credits:</strong> ${course.credits}</p>

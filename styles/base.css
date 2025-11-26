@@ -332,8 +332,13 @@ dialog::backdrop {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
+    color:  #344e41;
 }
 
 #close-modal:hover {
     background: #ccc;
+}
+
+#close-modal::before {
+  content: "\2716"; /* Use the ❌ symbol */
 }
