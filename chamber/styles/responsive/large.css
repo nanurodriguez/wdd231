@@ -161,6 +161,9 @@
         left: 50%;
         font-size: 14px;
     }
+    .hero h1, .hero p {
+    margin: 0;
+    }
 
     /**HOME**/
     .home {
