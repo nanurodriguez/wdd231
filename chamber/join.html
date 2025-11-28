@@ -57,15 +57,16 @@
             </div>
             <button id="ham-button" class="hamburger" aria-label="navigation"></button>
         </header>
-        <nav id="nav-bar" class="navigation">
+        <nav id="nav-bar" class="navigation show">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a class="current" href="join.html">Join Now</a></li>
             </ul>
-            <button id="join-button" class="join-button"><a href="join.html">Join Now</a></button>
         </nav>
+        
 
     <!-- ===================== FORM ===================== -->
         <main>
@@ -78,7 +79,6 @@
                             First Name
                             <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
                         </label>
-                        <input type="submit" value="Submit Chamber of Commerce Application">
                         
                         <label>
                             Last Name
@@ -124,7 +124,7 @@
 
                         <input type="hidden" id="timestamp" name="timestamp">
 
-                        <input type="submit" value="Apply">
+                        <input class="form-button"type="submit" value="Apply">
 
                     </form>
                 </section>
@@ -133,7 +133,7 @@
                     <div class="card">
                         <h3>Non Profit Membership</h3>
                         <p>No fee for non-profit organizations.</p>
-                        <button data-modal="npModal">More Info</button>
+                        <button class="form-button" data-modal="npModal">More Info</button>
                     </div>
 
                     <div class="card">
@@ -141,7 +141,7 @@
                         <p>Entry-level benefits for small businesses.</p>
                         <p>Free advertising.</p>
                         <h4>$25 per month</h4>
-                        <button data-modal="bronzeModal">More Info</button>
+                        <button class="form-button" data-modal="bronzeModal">More Info</button>
                     </div>
 
                     <div class="card">
@@ -149,7 +149,7 @@
                         <p>Enhanced visibility + additional perks.</p>
                         <p>Free advertising.</p>
                         <h4>$40 per month</h4>
-                        <button data-modal="silverModal">More Info</button>
+                        <button class="form-button"  data-modal="silverModal">More Info</button>
                     </div>
 
                     <div class="card">
@@ -157,13 +157,18 @@
                         <p>Full advertising + priority exposure.</p>
                         <p>Free advertising.</p>
                         <h4>$25 per month</h4>
-                        <button data-modal="goldModal">More Info</button>
+                        <button class="form-button" data-modal="goldModal">More Info</button>
                     </div>
 
                 </section>
-
-            </div> 
-            <dialog id="npModal" class="modal">
+                <!-- Modals for membership details -->
+                <dialog id="npModal" class="modal">
+                </dialog>
+                <dialog id="bronzeModal" class="modal">
+                </dialog>
+                <dialog id="silverModal" class="modal">
+                </dialog>
+                <dialog id="goldModal" class="modal">
                 </dialog>
                 
         </main>
