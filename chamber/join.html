@@ -29,12 +29,13 @@
 
         <link rel="stylesheet" href="styles/base/normalize.css">
         <link rel="stylesheet" href="styles/base/base.css">
+        <link rel="stylesheet" href="styles/responsive/large.css">
         <link rel="stylesheet" href="styles/layout/footer.css">
         <link rel="stylesheet" href="styles/layout/header.css">
         <link rel="stylesheet" href="styles/pages/join.css">
         <link rel="stylesheet" href="styles/pages/home.css">
         <link rel="stylesheet" href="styles/pages/directory.css">
-        <link rel="stylesheet" href="styles/responsive/large.css">
+        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,155 +66,41 @@
             </ul>
             <button id="join-button" class="join-button"><a href="join.html">Join Now</a></button>
         </nav>
-        <main>
+
     <!-- ===================== FORM ===================== -->
-            <section class="member-form">
-                <h1>Join Our Chamber</h1>
+        <main>
+            <div class="join-container"> 
+                
+                <section class="member-form">
+                    <h1>Join Our Chamber</h1>
+                    <form class="member-form" method="get" action="thankyou.html">
+                        <label>
+                            First Name
+                            <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
+                        </label>
+                        <input type="submit" value="Submit Chamber of Commerce Application">
+                    </form>
+                </section>
 
-                <form  class= "member-form" method="get" action="thankyou.html">
-                    
-                    <label>
-                        First Name
-                        <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
-                    </label>
+                <section class="membership-cards">
+                    <div class="card fade-in">
+                        <h3>NP Membership</h3>
+                        <p>No fee • For nonprofit organizations</p>
+                        <button data-modal="npModal">View Benefits</button>
+                    </div>
+                    <div class="card fade-in delay3">
+                        <h3>Gold Membership</h3>
+                        <p>Premium benefits & exposure</p>
+                        <button data-modal="goldModal">View Benefits</button>
+                    </div>
+                </section>
 
-                    <label>
-                        Last Name
-                        <input type="text" name="last-name" title="Enter your last name" autocomplete="family-name" required>
-                    </label>
-
-                    <label>
-                        Organizational Title
-                        <input type="text" 
-                            name="org-title" 
-                            title="Enter your title in the organization" 
-                            autocomplete="organization-title"
-                            pattern="[A-Za-z\\- ]{7,}"
-                            placeholder="Example: Marketing Lead"
-                            required>
-                    </label>
-
-                    <label>
-                        Email
-                        <input type="email" 
-                            name="email" 
-                            title="Enter your email address"
-                            autocomplete="email"
-                            placeholder="example@email.com"
-                            required>
-                    </label>
-
-                    <label>
-                        Mobile Phone
-                        <input type="tel" 
-                            name="phone" 
-                            title="Enter your phone number"
-                            autocomplete="tel"
-                            required>
-                    </label>
-
-                    <label>
-                        Organization Name
-                        <input type="text" 
-                            name="organization" 
-                            title="Enter your organization's name"
-                            autocomplete="organization"
-                            required>
-                    </label>
-
-                    <label>
-                        Membership Level
-                        <select name="membership" title="Select a membership level" required>
-                            <option value="">Select one…</option>
-                            <option value="np">NP Membership</option>
-                            <option value="bronze">Bronze Membership</option>
-                            <option value="silver">Silver Membership</option>
-                            <option value="gold">Gold Membership</option>
-                        </select>
-                    </label>
-
-                    <label>
-                        Business Description
-                        <textarea name="description" 
-                                title="Describe your business"></textarea>
-                    </label>
-
-                    <input type="hidden" id="timestamp" name="timestamp">
-
-                    <input type="submit" value="Submit Chamber of Commerce Application">
-                </form>
-            </section>
-
-            <!-- ===================== MEMBERSHIP CARDS ===================== -->
-            <section class="membership-cards">
-                <div class="card fade-in">
-                    <h3>NP Membership</h3>
-                    <p>No fee • For nonprofit organizations</p>
-                    <button data-modal="npModal">View Benefits</button>
-                </div>
-
-                <div class="card fade-in delay1">
-                    <h3>Bronze Membership</h3>
-                    <p>Entry-level benefits</p>
-                    <button data-modal="bronzeModal">View Benefits</button>
-                </div>
-
-                <div class="card fade-in delay2">
-                    <h3>Silver Membership</h3>
-                    <p>More visibility & perks</p>
-                    <button data-modal="silverModal">View Benefits</button>
-                </div>
-
-                <div class="card fade-in delay3">
-                    <h3>Gold Membership</h3>
-                    <p>Premium benefits & exposure</p>
-                    <button data-modal="goldModal">View Benefits</button>
-                </div>
-            </section>
-
-            <!-- ===================== MODALS ===================== -->
+            </div> 
             <dialog id="npModal" class="modal">
-                <h2>NP Membership Benefits</h2>
-                <ul>
-                    <li>No membership fee</li>
-                    <li>Community event access</li>
-                    <li>Basic directory listing</li>
-                </ul>
-                <button class="close-modal">Close</button>
-            </dialog>
-
-            <dialog id="bronzeModal" class="modal">
-                <h2>Bronze Membership Benefits</h2>
-                <ul>
-                    <li>All NP benefits</li>
-                    <li>Newsletter advertising</li>
-                    <li>Discounted training sessions</li>
-                </ul>
-                <button class="close-modal">Close</button>
-            </dialog>
-
-            <dialog id="silverModal" class="modal">
-                <h2>Silver Membership Benefits</h2>
-                <ul>
-                    <li>All Bronze benefits</li>
-                    <li>Homepage spotlight (1x monthly)</li>
-                    <li>Event booth discounts</li>
-                </ul>
-                <button class="close-modal">Close</button>
-            </dialog>
-
-            <dialog id="goldModal" class="modal">
-                <h2>Gold Membership Benefits</h2>
-                <ul>
-                    <li>All Silver benefits</li>
-                    <li>Premium homepage spotlight</li>
-                    <li>Free event booths</li>
-                    <li>First priority invitations</li>
-                </ul>
-                <button class="close-modal">Close</button>
-            </dialog>
-
+                </dialog>
+                
         </main>
+
         <footer>
             <div class="footer-content">
                 <div class="social-media">

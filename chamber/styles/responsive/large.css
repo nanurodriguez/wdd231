@@ -240,11 +240,12 @@
 
     .join-container {
         display: grid;
-        grid-template-columns: 1fr 330px;
-        gap: 1.5rem;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
         max-width: 1200px;
         margin: 2rem auto;
         padding: 1rem;
+        align-items: start;
     }
 
 
