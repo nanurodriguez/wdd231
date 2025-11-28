@@ -234,50 +234,71 @@
         margin: 0 auto;
     }
 
-    /* LARGE VIEW- FORM */
 
-    .member-application-section {
+
+    /* -------- JOIN PAGE — LARGE VIEW -------- */
+
+    .join-container {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* form left (bigger), cards right */
-        gap: 2rem;
-        align-items: start;
-        padding: 1.5rem;
+        grid-template-columns: 1fr 330px;
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
     }
 
-    /* membership cards column becomes a vertical stack on the right */
+
+    .member-form {
+        background-color: #fff;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+    }
+
     .membership-cards {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
-        position: sticky;
-        top: 1.5rem; 
     }
 
-    /* Staggered entrance animation for cards */
+
     .card {
+        background-color: #fff;
+        border: 1px solid #e1d4cb;
+        padding: 1rem;
+        border-radius: 6px;
+        font-family: 'Montserrat', sans-serif;
         opacity: 0;
-        transform: translateY(18px);
-        animation: cardFadeUp 600ms cubic-bezier(.2,.9,.2,1) forwards;
+        transform: translateX(15px);
+        animation: cardSlideIn 0.6s ease-out forwards;
     }
 
-    .card:nth-child(1) { animation-delay: 0.18s; }
-    .card:nth-child(2) { animation-delay: 0.36s; }
-    .card:nth-child(3) { animation-delay: 0.54s; }
-    .card:nth-child(4) { animation-delay: 0.72s; }
-
-    @keyframes cardFadeUp {
-        to { opacity: 1; transform: translateY(0); }
+    .card h3 {
+        margin: 0 0 0.5rem 0;
+        color: #7B4019;
     }
 
-    /* Slight hover scale on large screens */
-    @media (min-width: 60rem) {
-        .card:hover { transform: translateY(-6px) scale(1.01); }
+    .card button {
+        background-color: #7B4019;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
     }
 
-    /* Modal content positioned at center / slightly larger */
-    .modal-content {
-        max-width: 520px;
-        padding: 1.5rem;
+    /* delayed animation for each card */
+    .card:nth-of-type(1) { animation-delay: 0.1s; }
+    .card:nth-of-type(2) { animation-delay: 0.25s; }
+    .card:nth-of-type(3) { animation-delay: 0.4s; }
+    .card:nth-of-type(4) { animation-delay: 0.55s; }
+
+    @keyframes cardSlideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
-
-
 }
