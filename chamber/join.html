@@ -79,6 +79,53 @@
                             <input type="text" name="first-name" title="Enter your first name" autocomplete="given-name" required>
                         </label>
                         <input type="submit" value="Submit Chamber of Commerce Application">
+                        
+                        <label>
+                            Last Name
+                            <input type="text" name="lastName" autocomplete="family-name" required title="Enter your last name">
+                        </label>
+
+                        <label>
+                            Organizational Title
+                            <input type="text" name="orgTitle" autocomplete="organization-title"
+                                pattern="[A-Za-z\\s-]{7,}"
+                                title="Min. 7 letters, spaces, or hyphens">
+                        </label>
+
+                        <label>
+                            Email
+                            <input type="email" name="email" autocomplete="email" required placeholder="example@email.com">
+                        </label>
+
+                        <label>
+                            Mobile Phone
+                            <input type="tel" name="phone" autocomplete="tel-national" required>
+                        </label>
+
+                        <label>
+                            Organization Name
+                            <input type="text" name="organization" autocomplete="organization" required>
+                        </label>
+                        <label>
+                            Membership Level
+                            <select name="membership" required>
+                                <option value="">Select one</option>
+                                <option value="np">NP Membership</option>
+                                <option value="bronze">Bronze</option>
+                                <option value="silver">Silver</option>
+                                <option value="gold">Gold</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Business Description
+                            <textarea name="description"></textarea>
+                        </label>
+
+                        <input type="hidden" id="timestamp" name="timestamp">
+
+                        <input type="submit" value="Apply">
+
                     </form>
                 </section>
 
