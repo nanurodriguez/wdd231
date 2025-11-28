@@ -103,7 +103,7 @@
             "links"
             "newsletter";
         gap: 0.04rem;
-        max-width: 1800px;
+        width:100%;
     }
 
     .social-media {
