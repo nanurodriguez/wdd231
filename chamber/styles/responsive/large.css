@@ -49,7 +49,6 @@
     .navigation ul {
         display:flex;
         justify-content: center;
-        font-size: 1.5 rem;
     }
 
 
@@ -121,12 +120,12 @@
     }
     .social-icons{
         grid-column: 3;
-        gap: 0.rem;
+
     }
     .social-media, .contact-us, .quick-links, .newsletter {
         justify-self: center;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
         text-align: center;
     }
     .contact-us {
@@ -293,7 +292,6 @@
     .card:nth-of-type(2) { animation-delay: 0.25s; }
     .card:nth-of-type(3) { animation-delay: 0.4s; }
     .card:nth-of-type(4) { animation-delay: 0.55s; }
-
     @keyframes cardSlideIn {
         to {
             opacity: 1;
