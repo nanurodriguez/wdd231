@@ -57,6 +57,12 @@ footer {
     margin-bottom: 8px;
 
 }
+.current {
+    font-weight: bold;
+    text-decoration: underline #ca7034;
+    background-color: #faeed6;
+    border-radius: 5px;
+}
 
 
 

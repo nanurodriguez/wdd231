@@ -75,21 +75,4 @@ header {
     text-decoration: underline;
     color: #7B4019;
 }
-.join-button {
-    border-radius: 10px;
-    background-color: #7B4019; 
-    color:  #FFFFFF; 
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-}
-.join-button:hover {
-    background-color: #FFEEA9;
-    color: #7B4019;
-    font-weight: bold;
-}
+
