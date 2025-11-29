@@ -1,0 +1,131 @@
+<!doctype html>
+ <html lang="en-US">
+    <head>
+        <meta charset="UTF-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This website will serve as a resource hub for businesses in the city of Eagle Mountain. It will be searchable, accessible, and user-friendly.">
+        <meta name="keywords" content="join, WDD231, JavaScript, BYU-I, web development, chamber, join chamber" >
+        <meta name="author" content="Nancy Bell">
+        <meta name="robots" content="index,follow">
+        <meta name="theme-color" content="#0a3d62">
+
+        <meta property="og:title" content="Chamber of Commerce Join Page">
+        <meta property="og:description" content="This website will serve as a resource hub for businesses in the city of Eagle Mountain. It will be searchable, accessible, and user-friendly.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content=" https://nanurodriguez.github.io/wdd231/chamber/images/eagle-mountain.webp"> 
+        <!--Remember to use the "raw.githubusercontent.com before the link of my image"-->
+
+        <meta property="og:url" content="https://nanurodriguez.github.io/wdd231/chamber/index.html">
+
+        <title>Eagle Mountain Chamber of Commerce - Join</title>
+
+        <link rel="icon" type="image/x-icon" 
+        href="images/chamber-logo.svg" sizes="96x96">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/base/normalize.css">
+        <link rel="stylesheet" href="styles/base/base.css">
+        <link rel="stylesheet" href="styles/responsive/large.css">
+        <link rel="stylesheet" href="styles/layout/footer.css">
+        <link rel="stylesheet" href="styles/layout/header.css">
+        <link rel="stylesheet" href="styles/pages/join.css">
+        <link rel="stylesheet" href="styles/pages/thankyou.css">
+        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/join.js" defer></script>
+        <script src="scripts/thankyou.js" defer></script>
+        <script src="scripts/dates.js" defer></script>
+        
+        
+        <!--<script src="script/newsletter.js" defer></script>-->
+
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <a href="index.html"><img src="images/icons/chamber-logo.svg" alt="Eagle Mountain Chamber of Commerce Logo" class="logo" width="100" height="100"></a>
+                <span>Eagle Mountain Chamber of Commerce</span>
+            </div>
+            <button id="ham-button" class="hamburger open" aria-label="navigation"></button>
+        </header>
+        <nav id="nav-bar" class="navigation show">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="current" href="join.html">Join Now</a></li>
+            </ul>
+        </nav>
+        <main class="thankyou-main">
+            <section class="message">
+                <h1>🎉 Application Received! Thank You!</h1>
+                <p>We appreciate your interest in joining the Eagle Mountain Chamber of Commerce. We have received your application and will review it shortly. Please find a summary of the information you submitted below.</p>
+                <p>A member of our team will contact you within 2-3 business days.</p>
+                
+                <div id="form-summary" class="summary-box">
+                    <h2>Submitted Information Summary</h2>
+                    </div>
+
+                <p class="return"><a href="index.html">Return to Home Page</a></p>
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="index.html"><img id="footer-logo" src="images/icons/chamber-logo.svg" alt="Eagle Mountain Chamber of Commerce Logo" class="logo" width="100" height="100"></a>
+                    <span>Eagle Mountain Chamber of Commerce</span>
+                    <div class="social-icons">
+                        <a href="https://x.com/" target="_blank"><img src="images/icons/x-twitter.svg" alt="X Twitter Icon"  width="50" height="50"></a>
+                        <a href="https://www.linkedin.com/in/nancybellweb/" target="_blank"><img src="images/icons/linkedin.svg" alt="LinkedIn Icon" width="50" height="50"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572028127332" target="_blank"><img src="images/icons/facebook.svg" alt="Facebook Icon" width="50" height="50"></a>
+                        <a href="https://www.instagram.com/nancybellweb/" target="_blank"><img src="images/icons/instagram.svg" alt="Instagram Icon" width="50" height="50"></a>
+                    </div>
+                </div>
+                <p>"Building a thriving business community through connection, support, and shared success"</p>
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <p>123 Main Street, Eagle Mountain, Utah</p>
+                    <p>Tel: 123-456-7890</p>
+                    <p>Email: info@emchamber.org</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li ><a href="directory.html">Directory</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a class="current" href="#">Join Now</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h5>Newsletter</h5>
+                    <input type="email" placeholder="Your email">
+                    <button id="subscribe-footer">Subscribe</button>
+                    <p>Stay updated with the latest news, events, and opportunities.</p>
+                </div>
+                <div>
+                
+                <div class="about-me">
+                <p>&copy; <span id="myName"></span> Eagle Mountain Chamber of Commerce | Nancy Bell | WDD 231 Project</p>
+                <p id="currentYear" class="currentYear"></p>
+                <p id="lastModified" class="lastModified">Last Modified</p>
+                </div>
+            </div>
+
+        </footer>
+    </body>
+</html>
