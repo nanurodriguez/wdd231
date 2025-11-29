@@ -59,10 +59,10 @@ footer {
 }
 .current {
     font-weight: bold;
-    text-decoration: underline #ca7034;
-    background-color: #faeed6;
+    text-decoration: underline;
     border-radius: 5px;
 }
+
 
 
 

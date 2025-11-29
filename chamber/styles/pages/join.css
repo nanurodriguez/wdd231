@@ -101,7 +101,7 @@ body {
 
 .card button {
     background: var(--accent-color);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 0.6rem 1rem;
     border-radius: 5px;
@@ -147,8 +147,9 @@ body {
     background: rgba(0,0,0,0.5);
 }
 
-.modal h2 {
+.modal h2, .modal h3, .modal p {
     color: var(--primary-color);
+    margin: 0.5rem;
 }
 
 .modal p, .modal ul {
