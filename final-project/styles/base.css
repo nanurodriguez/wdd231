@@ -139,18 +139,18 @@ a:hover {
     background-color: var(--color-accent-subtle); /* Placeholder image color */
     border-radius: 10px;
     object-fit: cover;
-    
+
 
 }
 
 /* Mission Section (Secondary Background) */
-.mission-section {
+.site-section {
     background-color: var(--color-bg-secondary); /* Very Light Cream */
     padding: 60px 0;
     text-align: center;
 }
 
-.mission-section h2 {
+.site-section h2 {
     margin-top: 0;
 }
 
@@ -180,7 +180,7 @@ a:hover {
 
 /* --- 6. Footer --- */
 
-.main-footer {
+footer {
     background-color: var(--color-accent-subtle); /* Subtle Accent Light Teal */
     color: var(--color-text-dark);
     padding: 25px 0;
