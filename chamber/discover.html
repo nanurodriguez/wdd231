@@ -1,27 +1,27 @@
 <!doctype html>
- <html lang="en-US">
+<html lang="en-US">
     <head>
         <meta charset="UTF-8" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="This website will serve as a resource hub for businesses in the city of Eagle Mountain. It will be searchable, accessible, and user-friendly.">
-        <meta name="keywords" content="directory, WDD231, JavaScript, BYU-I, web development, chamber" >
+        <meta name="keywords" content="discover,Eagle Mountain, Places, WDD231, JavaScript, BYU-I, web development, chamber, join chamber" >
         <meta name="author" content="Nancy Bell">
         <meta name="robots" content="index,follow">
         <meta name="theme-color" content="#0a3d62">
 
-        <meta property="og:title" content="Chamber of Commerce Directory">
+        <meta property="og:title" content="Chamber of Commerce Discover Page">
         <meta property="og:description" content="This website will serve as a resource hub for businesses in the city of Eagle Mountain. It will be searchable, accessible, and user-friendly.">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://nanurodriguez.github.io/wdd231/chamber/images/eagle-mountain.webp"> 
+        <meta property="og:image" content=" https://nanurodriguez.github.io/wdd231/chamber/images/eagle-mountain.webp"> 
         <!--Remember to use the "raw.githubusercontent.com before the link of my image"-->
 
         <meta property="og:url" content="https://nanurodriguez.github.io/wdd231/chamber/index.html">
 
-        <title>Eagle Mountain Chamber of Commerce - Directory</title>
+        <title>Eagle Mountain Chamber of Commerce - Discover</title>
 
         <link rel="icon" type="image/x-icon" 
-        href="images/icons/chamber-logo.svg" sizes="96x96">
+        href="images/chamber-logo.svg" sizes="96x96">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,16 +32,16 @@
         <link rel="stylesheet" href="styles/responsive/large.css">
         <link rel="stylesheet" href="styles/layout/footer.css">
         <link rel="stylesheet" href="styles/layout/header.css">
-        <link rel="stylesheet" href="styles/pages/directory.css">
+        <link rel="stylesheet" href="styles/pages/discover.css">
         
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <script src="scripts/navigation.js" defer></script>
-        <script src="scripts/directory.js" defer></script>
         <script src="scripts/dates.js" defer></script>
-        <!--<script src="scripts/join.js" defer></script>-->
+        
         
         <!--<script src="script/newsletter.js" defer></script>-->
 
@@ -57,39 +57,17 @@
         <nav id="nav-bar" class="navigation show">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a class="current" href="directory.html">Directory</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a class="current" href="discover.html">Discover</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="join.html">Join Now</a></li>
             </ul>
         </nav>
-        <main>
-            <h1>Directory</h1>
-            <div class="view-toggle">
-            <button id="gridView">Grid View</button>
-            <button id="listView">List View</button>
-            </div>
-            <section class="members-container grid" id="membersContainer">
-            <!-- Member cards will be injected here -->
-            <div class="member-card">
-                <h3>Sunrise Café</h3>
-                <p>101 Main St, City Center</p>
-                <p>503-2222-1111</p>
-                <a href="https://sunrisecafe.sv" target="_blank">Visit Website</a>
-            </div>
-
-            <div class="member-card">
-                <h3>EcoPrint Solutions</h3>
-                <p>202 Market Ave, Ranches</p>
-                <p>503-2222-2222</p>
-                <a href="https://ecoprint.sv" target="_blank">Visit Website</a>
-            </div>
-
-            <!-- member cards will be added here, using Js -->
-            </section>
-
-
+        <main class="discover-cards">
+            <!--Discover Page-->
         </main>
+
+
         <footer>
             <div class="footer-content">
                 <div class="social-media">
