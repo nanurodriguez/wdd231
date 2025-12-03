@@ -52,7 +52,7 @@ export const places = [
     },
     {
         "name": "Lake Mountains HP Trail Network",
-        "address": "18035 W 1540 N, Fairfield, UT 84013",
+        "address": "Lake Mountains, Eagle Mountain, UT",
         "cost": "$3 per person or $10 per family (up to 8 people)",
         "description": "A short drive from Eagle Mountain, this state park preserves the site of a large US Army camp from the 1850s and the historic Stagecoach Inn, which is open for tours.",
         "photo_url": "images/pages/discover/lakeview.webp"
