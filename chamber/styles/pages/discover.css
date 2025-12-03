@@ -1,0 +1,102 @@
+/* --- MOBILE VIEW (Default) --- */
+
+.discover-container h2, .discover-container p {
+    text-align: center;
+    margin: 0.2rem 0 2rem 0;
+    max-width: 300px;
+}
+.discover-container p, .discover-container address{
+    margin-bottom: 0.5rem;
+}
+.discover-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Stacking them vertically */ 
+    grid-template-areas:
+        "title" 
+        "visit-message"
+        "gallery";
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.visit-message {
+    grid-area: visit-message;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.show-all {
+    grid-area: gallery;
+    display: grid;
+    gap: 1rem;
+}
+
+h1 {
+    grid-area: title;
+    text-align: center;    
+    margin-top: 0.3rem;
+
+}
+
+/* Card Styling */
+.card {
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
+}
+
+.card button {
+    margin-top: auto; /* Push button to bottom */
+    padding: 0.5rem 1rem;
+    background-color: #7B4019;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* --- MEDIUM SCREENS (Tablet) --- */
+@media (min-width: 640px) {
+    .show-all {
+        grid-template-columns: 1fr 1fr; /* 2 columns for cards */
+    }
+}
+
+/* --- LARGE SCREENS (Desktop) --- */
+@media (min-width: 1024px) {
+    .discover-container {
+        /* Sidebar on the left (1fr), Gallery on the right (3fr) */
+        grid-template-areas: 
+            "title"
+            "visit-message"
+            "gallery";
+        max-width: 1400px;
+    }
+
+
+    .show-all {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for cards */
+    }
+
+    /* Hover effect for desktop only */
+    .card img:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
+}
