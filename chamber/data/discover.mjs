@@ -45,7 +45,7 @@ export const places = [
     },
     {
         "name": "Free Events in Eagle Mountain",
-        "address": "73F5+VQ Eagle Mountain, Utah",
+        "address": "Eagle Mountain, Utah",
         "cost": "Free",
         "description": "There are various free community events held throughout the year in Eagle Mountain, including outdoor concerts, movie nights, holiday celebrations, and farmers' markets.",
         "photo_url": "images/pages/discover/events.webp"
