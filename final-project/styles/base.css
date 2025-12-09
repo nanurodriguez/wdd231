@@ -35,7 +35,7 @@ body {
     padding: 0 20px;
 }
 
-/* Headings (M PLUS Rounded 1c) */
+
 h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-text-dark);
@@ -47,7 +47,7 @@ h1 { font-size: 2.8rem; }
 h2 { font-size: 2rem; margin-top: 1.5em; }
 h3 { font-size: 1.4rem; }
 
-/* Links */
+
 a {
     color: var(--color-text-dark);
     text-decoration: none;
@@ -111,7 +111,7 @@ a:hover {
 }
 
 .primary-cta:hover {
-    background-color: #fcae1e; /* Slightly darker orange for visual feedback */
+    background-color: #fcae1e; 
     color: var(--color-text-dark);
 }
 
@@ -154,7 +154,7 @@ a:hover {
     margin-top: 0;
 }
 
-/* Highlights Section */
+
 .highlights-section {
     padding: 60px 0;
     background-color: var(--color-bg-primary); /* Medium Teal */
