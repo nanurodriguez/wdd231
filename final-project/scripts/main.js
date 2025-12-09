@@ -45,7 +45,7 @@ if (lastVisitElement) {
             lastVisitElement.textContent = `Welcome back! It's been ${days} day(s) since your last visit.`;
         }
     } else {
-        lastVisitElement.textContent = "Welcome to Sunnyside Preschool! Your first visit is now recorded.";
+        lastVisitElement.textContent = "Welcome to Sunnyside Preschool!";
     }
 
     // Update the last visit time for the next session
