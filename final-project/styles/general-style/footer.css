@@ -1,0 +1,23 @@
+/* --- 6. Footer --- */
+
+footer {
+    background-color: var(--color-accent-subtle); /* Subtle Accent Light Teal */
+    color: var(--color-text-dark);
+    padding: 25px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.container .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container .footer-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

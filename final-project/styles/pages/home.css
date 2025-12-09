@@ -1,0 +1,106 @@
+/****HOME PAGE STYLES***/
+/* --- 4. Call-to-Action Buttons (CTAs) --- */
+
+.cta-button {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 50px; /* Rounded look */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.primary-cta {
+    background-color: var(--color-accent-cta); /* Vibrant Orange/Yellow */
+    color: var(--color-text-dark); /* Pure Black text */
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.primary-cta:hover {
+    background-color: #fcae1e; 
+    color: var(--color-text-dark);
+}
+
+/* --- 5. Section Styling --- */
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--color-bg-primary); /* Medium Teal */
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: var(--color-accent-subtle); /* Placeholder image color */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
+}
+
+/* Mission Section (Secondary Background) */
+.site-section {
+    background-color: var(--color-bg-secondary); /* Very Light Cream */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.site-section h2 {
+    margin-top: 0;
+}
+
+
+.highlights-section {
+    padding: 60px 0;
+    background-color: var(--color-bg-primary); /* Medium Teal */
+}
+
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--color-bg-secondary); /* Very Light Cream Cards */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-family: var(--font-body);
+}
+@media (max-width: 768px) {
+    /* MOBILE VIEW */
+
+}
+
+/****Tablet view- Medium screens
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+}
+    **/
+
+
+/****Desktop view- Large screens**/
+@media (min-width: 769px) {
+    .hero-image {
+        max-height: 600px;
+    }
+}
