@@ -23,6 +23,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: var(--font-body);
     color: var(--color-text-dark);
     background-color: var(--color-bg-primary); /* Primary Background: Medium Teal */

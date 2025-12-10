@@ -73,13 +73,6 @@
 
 }
 
-/****Tablet view- Medium screens
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-
-}
-    **/
 
 
 /****Desktop view- Large screens**/
@@ -90,6 +83,10 @@
     .navigation {
         display: block;
         width: auto;
+    }
+    .navigation.show {
+        position: static;
+        height: auto;
     }
     .navigation ul {
         gap:35px;
