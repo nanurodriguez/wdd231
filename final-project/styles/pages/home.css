@@ -40,11 +40,14 @@
         "image";
     gap: 1rem;
 }
+.hero-text {
+    padding: 0 20px 40px 20px;
+    grid-area: content;
+}
 .container>.hero-image {
     width: 100%;
-    object-fit: cover;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 0.75rem;
     box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
     
@@ -103,16 +106,17 @@
     .hero-content {
         display: flex;
         align-items: center;
-        gap: 40px;
+        justify-content: center;
     }
     .hero-text{
         flex: 1;
+        padding: 0 0 0 150px;
     }
 
     .hero-image {
         box-shadow: 0 2px 4px rgba(66, 33, 3, 0.1);
         flex: 1; /* NOTE: Allows image to take up half the space */
-        min-height: 350px; 
+        object-fit: contain;
     }
     .highlights-section .highlight-cards {
         grid-template-columns: repeat(3, 1fr); /* NOTE: Re-enable 3-column card layout */
