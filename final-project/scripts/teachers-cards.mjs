@@ -22,7 +22,6 @@ async function fetchAndDisplayTeachers() {
 fetchAndDisplayTeachers();
 
 
-// scripts/teacher-cards.mjs (Handles card generation)
 
 export function displayTeacherCards(teachers) {
     const teachersContainer = document.querySelector("#teachers-container");
@@ -30,25 +29,69 @@ export function displayTeacherCards(teachers) {
 
     teachersContainer.innerHTML = ''; 
 
-    teachers.forEach((teacher) => {
+    const cardsHTML = teachers.map((teacher) => {
         const imagePath = teacher.profileImage; 
         
-        const cardHTML = `
+        return `
             <div class="teacher-card">
                 <img src="${imagePath}" alt="Profile image of ${teacher.name}" loading="lazy" class="teacher-profile-img">
                 <div class="teacher-info">
                     <h3>${teacher.name}</h3>
-                    
                     <p class="teacher-role"><strong>Role:</strong> ${teacher.role}</p>
-                    <p class="teacher-exp"><strong>Experience:</strong> ${teacher.yearsExperience} years</p>
-                    <p class="teacher-bio-snippet">${teacher.bioSnippet}</p>
-                    
                     <button class="modal-trigger" data-teacher-id="${teacher.id}">View Full Bio</button>
                 </div>
             </div>
         `;
-        teachersContainer.innerHTML += cardHTML;
+    }).join('');
+
+    teachersContainer.innerHTML = cardsHTML;
+
+    setupModalListeners(teachers);
+}
+
+//Adding MODALS to display full bio of the teachers
+
+const modal = document.querySelector('#teacher-modal');
+const modalProfileContent = document.querySelector('#modal-profile-content');
+const closeModalButton = document.querySelector('#close-modal');
+
+function populateModal(teacher) {
+    if (!modalProfileContent || !teacher) return;
+        const fullBioHTML = `
+        <h3>${teacher.name}</h3>
+        <p class="teacher-role"><strong>Role:</strong> ${teacher.role}</p>
+        <p class="teacher-exp">Years of Experience: ${teacher.yearsExperience}</p>
+        
+        <h4>Full Bio:</h4>
+        <p>${teacher.bioSnippet}</p>
+        `;
+    
+    modalProfileContent.innerHTML = fullBioHTML;
+    modal.showModal();
+}
+
+function setupModalListeners(teachersData) {
+    const container = document.querySelector('#teachers-container');
+    container.addEventListener('click', (event) => {
+        const button = event.target.closest('.modal-trigger');
+        if (button) {
+            const teacherId = parseInt(button.dataset.teacherId);
+            const teacher = teachersData.find(t => t.id === teacherId); 
+
+            if (teacher) {
+                populateModal(teacher);
+            }
+        }
+    });
+
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', () => modal.close());
+    }
+    
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
     });
 }
 
-//
