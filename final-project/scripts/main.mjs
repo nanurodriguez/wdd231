@@ -1,53 +1,69 @@
 
 
-// Mobile Navigation Toggle
-const navButton = document.querySelector('#ham-button');
-const navLinks = document.querySelector('#nav-bar');
+// General site functionality and Local Storage implementation
 
-if (navButton && navLinks) {
-    navButton.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        navButton.classList.toggle('show');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // date and time
 
-        const isExpanded = navButton.getAttribute('aria-expanded') === 'true' || false;
-        navButton.setAttribute('aria-expanded', !isExpanded);
-    });
-}
-
-// dates in footer
-const currentYearElement = document.getElementById('currentYear');
-if (currentYearElement) {
-    currentYearElement.textContent = `© ${new Date().getFullYear()} All Rights Reserved`; 
-}
-
-// last modified
-const lastModifiedElement = document.getElementById('lastModified');
-if (lastModifiedElement) {
-    const lastModified = new Date(document.lastModified);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    lastModifiedElement.textContent = `Last Modified: ${lastModified.toLocaleDateString('en-US', options)}`;
-}
-
-
-//STORAGE
-const lastVisitElement = document.getElementById('last-visit'); 
-const lastVisitTimestamp = localStorage.getItem('sunnysideLastVisit');
-const now = Date.now();
-
-if (lastVisitElement) {
-    if (lastVisitTimestamp) {
-        // Calculate days since last visit
-        const days = Math.floor((now - lastVisitTimestamp) / (1000 * 60 * 60 * 24));
-        
-        if (days === 0) {
-            lastVisitElement.textContent = "Welcome back! You visited earlier today.";
-        } else {
-            lastVisitElement.textContent = `Welcome back! It's been ${days} day(s) since your last visit.`;
-        }
-    } else {
-        lastVisitElement.textContent = "Welcome to Sunnyside Preschool!";
+    const now = new Date();
+    const lastModifiedElement = document.getElementById('lastModified');
+    const currentYearElement = document.getElementById('currentYear');
+    
+    // year
+    if (currentYearElement) {
+        currentYearElement.textContent = `© ${now.getFullYear()} | Sunnyside Preschool | `;
     }
 
-    // Update the last visit time for the next session
-    localStorage.setItem('sunnysideLastVisit', now);
-}
+    //last modified
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+    }
+
+    // local storage
+    
+    const lastVisitElement = document.getElementById('last-visit');
+    
+    if (lastVisitElement) {
+        const LAST_VISIT_KEY = 'ss_lastVisit';
+        
+        const lastVisitTimestamp = localStorage.getItem(LAST_VISIT_KEY);
+        
+        const currentTimestamp = Date.now();
+        
+        if (lastVisitTimestamp) {
+            const lastVisitTime = parseInt(lastVisitTimestamp);
+            
+            const MS_PER_DAY = 1000 * 60 * 60 * 24;
+            const daysSinceLastVisit = Math.floor((currentTimestamp - lastVisitTime) / MS_PER_DAY);
+
+            let message = "Welcome Back!";
+            
+            if (daysSinceLastVisit === 0) {
+                message = "Welcome Back! Good to see you today.";
+            } else if (daysSinceLastVisit === 1) {
+                message = "Welcome Back! You visited yesterday.";
+            } else {
+                message = `Welcome Back! It has been ${daysSinceLastVisit} days since your last visit.`;
+            }
+            
+            lastVisitElement.textContent = message;
+
+        } else {
+            lastVisitElement.textContent = "Welcome to Sunnyside Preschool!";
+        }
+
+        localStorage.setItem(LAST_VISIT_KEY, currentTimestamp);
+    }
+    
+    // navigation    
+    const hamButton = document.querySelector('#ham-button');
+    const navigation = document.querySelector('#nav-bar');
+
+    if (hamButton && navigation) {
+        hamButton.addEventListener('click', () => {
+            navigation.classList.toggle('open');
+            hamButton.classList.toggle('open');
+        });
+    }
+});

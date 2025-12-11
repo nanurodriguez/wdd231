@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh; /* Fill most of the viewport height */
+    min-height: 70vh;
     padding: 20px;
     text-align: center;
 }
@@ -15,7 +15,7 @@
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    border: 3px solid var(--color-accent-cta); /* Border highlights the success */
+    border: 3px solid var(--color-accent-cta); 
 }
 
 .success-title {
@@ -31,7 +31,7 @@
 }
 
 .next-steps-info {
-    background-color: var(--color-accent-subtle); /* Light background for the info box */
+    background-color: var(--color-accent-subtle); 
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -51,6 +51,31 @@
 }
 
 .back-home-button {
-    /* Inherits CTA styles, just ensuring it's centered if needed */
     display: inline-block;
+}
+.submission-review {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px dashed var(--color-accent-subtle);
+    border-radius: 8px;
+}
+
+.submission-review h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.submission-review p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.submission-review hr {
+    border: none;
+    border-top: 1px solid var(--color-accent-subtle);
+    margin: 10px 0;
 }
