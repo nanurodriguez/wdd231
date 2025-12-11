@@ -91,8 +91,40 @@ textarea {
     margin-top: 20px;
     width: 100%;
 }
+/* --- Validation Feedback Styles --- */
 
-/* Mobile adjustments (mostly handled by 100% width, but good to check) */
+.error-message {
+    color: #cc0000;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.input-error {
+    border-color: #cc0000 !important;
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+}
+
+.input-success {
+    border-color: #4CAF50 !important;
+}
+
+#consent + .error-message {
+    margin-top: -10px; 
+    margin-left: 25px; 
+}
+
+input[type="text"].input-error,
+input[type="email"].input-error,
+input[type="tel"].input-error,
+input[type="date"].input-error,
+input[type="month"].input-error,
+select.input-error,
+textarea.input-error {
+    border-color: #cc0000 !important;
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.5);
+}
+
 @media (max-width: 600px) {
     #enrollment-form {
         padding: 15px;
