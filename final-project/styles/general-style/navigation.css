@@ -60,7 +60,7 @@
     }
     .navigation.show ul {
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         gap: 15px;
         font-size: 1.2rem;
     }
@@ -94,7 +94,6 @@
         font-size: x-large;
     }
     .title {
-        font-weight: 1500;
         font-size: 2.5rem;
     }
     .container>img {
