@@ -1,11 +1,16 @@
 //fetching the data from the teachers.mjs file and displaying it on the page
 
+let allTeachersData = [];// Global variable to store the original full list of teachers
+
+
 async function fetchAndDisplayTeachers() {
     try {
         const dataModule = await import('../data/teachers.mjs');
-        const teachersData = dataModule.teachers;
-
-        displayTeacherCards(teachersData);
+        allTeachersData = dataModule.teachers; 
+        
+        displayTeacherCards(allTeachersData); 
+        setupSearchListener(); 
+        setupModalListeners(allTeachersData); 
 
     } catch (error) {
         console.error('Failed to load or display teacher data:', error);
@@ -22,6 +27,10 @@ fetchAndDisplayTeachers();
 export function displayTeacherCards(teachers) {
     const teachersContainer = document.querySelector("#teachers-container");
     if (!teachersContainer) return;
+    if (teachers.length === 0) {
+        teachersContainer.innerHTML = '<p class="no-results">No teachers found matching your search criteria. Try a different name or role!</p>';
+        return;
+    }
 
     const cardsHTML = teachers.map((teacher) => {
         const imagePath = teacher.profileImage;
@@ -39,15 +48,34 @@ export function displayTeacherCards(teachers) {
     }).join('');
 
     teachersContainer.innerHTML = cardsHTML;
-
-    setupModalListeners(teachers);
 }
+
+// using filter
+function setupSearchListener() {
+    const searchInput = document.querySelector('#teacher-search');
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', (event) => {
+        const searchTerm = event.target.value.toLowerCase().trim();
+
+        const filteredTeachers = allTeachersData.filter(teacher => {
+            const nameMatch = teacher.name.toLowerCase().includes(searchTerm);
+            const roleMatch = teacher.role.toLowerCase().includes(searchTerm);
+            
+            return nameMatch || roleMatch;
+        });
+
+        displayTeacherCards(filteredTeachers);
+        
+        // Note: The modal listeners remain attached to the main container, so they still work!
+    });
+}
+
 
 
 const modal = document.querySelector('#teacher-modal');
 const modalProfileContent = document.querySelector('#modal-profile-content');
 const closeModalButton = document.querySelector('#close-modal');
-
 
 function populateModal(teacher) {
     if (!modalProfileContent || !teacher) return;
@@ -66,7 +94,6 @@ function populateModal(teacher) {
     modal.showModal();
 }
 
-
 function setupModalListeners(teachersData) {
     const container = document.querySelector('#teachers-container');
 
@@ -74,7 +101,7 @@ function setupModalListeners(teachersData) {
         const button = event.target.closest('.modal-trigger');
         if (button) {
             const teacherId = parseInt(button.dataset.teacherId);
-            const teacher = teachersData.find(t => t.id === teacherId); 
+            const teacher = allTeachersData.find(t => t.id === teacherId); 
 
             if (teacher) {
                 populateModal(teacher);

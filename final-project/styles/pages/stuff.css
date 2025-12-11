@@ -153,6 +153,44 @@
         transform: scale(1); 
     }
 }
+
+/* --- Search/Filter Styles --- */
+
+.filter-controls {
+    max-width: 1000px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.filter-controls h2 {
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.search-bar-container {
+    background-color: var(--color-bg-secondary);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#teacher-search {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid var(--color-accent-subtle);
+    border-radius: 6px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+#teacher-search:focus {
+    border-color: var(--color-accent-cta); /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 179, 0, 0.5);
+}
 /* Medium/Large Screen Layout */
 @media (min-width: 600px) {
     .teachers-container {
