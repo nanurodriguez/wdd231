@@ -49,31 +49,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Validating Date of Birth 
-    function isValidDOB(input) {
-        if (!isRequired(input)) return false;
 
-        const dob = new Date(input.value);
-        const today = new Date();
-        const maxAgeDate = new Date();
-        maxAgeDate.setFullYear(today.getFullYear() - 5); // Max age: 5 years old
-        const minAgeDate = new Date();
-        minAgeDate.setFullYear(today.getFullYear() - 1); // Min age: 1 year old
 
-        if (dob > today) {
-            showError(input, 'Date of Birth cannot be in the future.');
-            return false;
-        }
-        if (dob < minAgeDate) {
-            showError(input, 'Child must be at least 1 year old.');
-            return false;
-        }
-        if (dob > maxAgeDate) {
-            showError(input, 'Child must be 5 years old or younger for these programs.');
-            return false;
-        }
-        showSuccess(input);
-        return true;
+function isValidDOB(input) {
+    if (!isRequired(input)) return false;
+
+    const dob = new Date(input.value);
+    const today = new Date();
+
+
+    // Child's DOB must be BEFORE this date.
+    const minAgeCutoff = new Date();
+    minAgeCutoff.setFullYear(today.getFullYear() - 1); 
+
+
+    // Child's DOB must be AFTER this date.
+    const maxAgeCutoff = new Date();
+    maxAgeCutoff.setFullYear(today.getFullYear() - 5); 
+    
+
+
+    // Future Date
+    if (dob > today) {
+        showError(input, 'Date of Birth cannot be in the future.');
+        return false;
     }
+    
+
+    if (dob > minAgeCutoff) {
+        showError(input, 'Child must be at least 1 year old.');
+        return false;
+    }
+    
+
+    if (dob < maxAgeCutoff) {
+        showError(input, 'Child must be 5 years old or younger for these programs.');
+        return false;
+    }
+    
+    showSuccess(input);
+    return true;
+}
 
 
     // Displaying error message next to the input
