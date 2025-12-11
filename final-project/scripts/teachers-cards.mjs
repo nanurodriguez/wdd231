@@ -1,7 +1,5 @@
 //fetching the data from the teachers.mjs file and displaying it on the page
 
-
-
 async function fetchAndDisplayTeachers() {
     try {
         const dataModule = await import('../data/teachers.mjs');
@@ -18,19 +16,15 @@ async function fetchAndDisplayTeachers() {
     }
 }
 
-
 fetchAndDisplayTeachers();
-
 
 
 export function displayTeacherCards(teachers) {
     const teachersContainer = document.querySelector("#teachers-container");
-    if (!teachersContainer) return; // Exit if container doesn't exist
-
-    teachersContainer.innerHTML = ''; 
+    if (!teachersContainer) return;
 
     const cardsHTML = teachers.map((teacher) => {
-        const imagePath = teacher.profileImage; 
+        const imagePath = teacher.profileImage;
         
         return `
             <div class="teacher-card">
@@ -49,29 +43,33 @@ export function displayTeacherCards(teachers) {
     setupModalListeners(teachers);
 }
 
-//Adding MODALS to display full bio of the teachers
 
 const modal = document.querySelector('#teacher-modal');
 const modalProfileContent = document.querySelector('#modal-profile-content');
 const closeModalButton = document.querySelector('#close-modal');
 
+
 function populateModal(teacher) {
     if (!modalProfileContent || !teacher) return;
-        const fullBioHTML = `
+        
+    const fullBioHTML = `
+        <img src="${teacher.profileImage}" alt="Profile image of ${teacher.name}">
         <h3>${teacher.name}</h3>
         <p class="teacher-role"><strong>Role:</strong> ${teacher.role}</p>
         <p class="teacher-exp">Years of Experience: ${teacher.yearsExperience}</p>
         
         <h4>Full Bio:</h4>
         <p>${teacher.bioSnippet}</p>
-        `;
+    `;
     
     modalProfileContent.innerHTML = fullBioHTML;
     modal.showModal();
 }
 
+
 function setupModalListeners(teachersData) {
     const container = document.querySelector('#teachers-container');
+
     container.addEventListener('click', (event) => {
         const button = event.target.closest('.modal-trigger');
         if (button) {
@@ -94,4 +92,3 @@ function setupModalListeners(teachersData) {
         }
     });
 }
-

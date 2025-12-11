@@ -29,6 +29,7 @@ body {
     background-color: var(--color-bg-primary); /* Primary Background: Medium Teal */
     line-height: 1.6;
     cursor: default;
+    min-width: 320px;
 }
 main {
     margin: 0 10px 0 10px;
