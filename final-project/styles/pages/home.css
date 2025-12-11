@@ -80,13 +80,19 @@
     margin-top: 40px;
 }
 
-.card {
+.highlight-cards .card {
     background-color: var(--color-bg-secondary); /* Very Light Cream Cards */
     padding: 30px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1;
 }
-
+.highlight-cards .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+    z-index: 10;
+}
 .card p {
     font-family: var(--font-body);
 }
@@ -117,6 +123,7 @@
         display: flex;
         flex-direction: column;
     }
+
 
 }
 
@@ -157,9 +164,11 @@
     }
 
     .highlight-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
-}
+    }
+
+    
 
 }

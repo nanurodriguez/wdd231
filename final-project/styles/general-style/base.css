@@ -28,6 +28,7 @@ body {
     color: var(--color-text-dark);
     background-color: var(--color-bg-primary); /* Primary Background: Medium Teal */
     line-height: 1.6;
+    cursor: default;
 }
 main {
     margin: 0 10px 0 10px;
@@ -40,6 +41,10 @@ h1, h2, h3 {
     color: var(--color-text-dark);
     margin-bottom: 0.5em;
     line-height: 1.2;
+    cursor: default;
+}
+p, .hero-text {
+    cursor: default;
 }
 
 h1 { font-size: 2.8rem; }
