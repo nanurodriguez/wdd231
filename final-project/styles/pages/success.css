@@ -1,0 +1,56 @@
+/* styles/pages/success.css */
+
+.success-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Fill most of the viewport height */
+    padding: 20px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: var(--color-bg-secondary);
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--color-accent-cta); /* Border highlights the success */
+}
+
+.success-title {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.success-message p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.next-steps-info {
+    background-color: var(--color-accent-subtle); /* Light background for the info box */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.next-steps-info h3 {
+    color: var(--color-accent-cta);
+    margin-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+.next-steps-info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.back-home-button {
+    /* Inherits CTA styles, just ensuring it's centered if needed */
+    display: inline-block;
+}
