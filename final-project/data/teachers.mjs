@@ -10,10 +10,10 @@ export const teachers = [
     },
     {
         "id": 2,
-        "name": "Mr. Marcus Bell",
+        "name": "Ms. Sasha Johnson",
         "role": "Assistant Teacher",
         "yearsExperience": 3,
-        "bioSnippet": "Mr. Bell brings boundless energy to the classroom and leads all our outdoor exploration activities, fostering a love for nature.",
+        "bioSnippet": "Ms. Johnson brings boundless energy to the classroom and leads all our outdoor exploration activities, fostering a love for nature.",
         "profileImage": "images/pages/stuff/profile2.webp"
     },
     {
@@ -42,10 +42,10 @@ export const teachers = [
     },
     {
         "id": 6,
-        "name": "Ms. Chloe Davis",
+        "name": "Mr. Chris Davis",
         "role": "Lead Pre-K Teacher",
         "yearsExperience": 10,
-        "bioSnippet": "Ms. Davis expertly prepares children for kindergarten, focusing on foundational academic skills through structured play.",
+        "bioSnippet": "Mr. Davis expertly prepares children for kindergarten, focusing on foundational academic skills through structured play.",
         "profileImage": "images/pages/stuff/profile6.webp"
     },
     {

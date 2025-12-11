@@ -1,11 +1,10 @@
 //fetching the data from the teachers.mjs file and displaying it on the page
 
 
-import { displayTeacherCards } from '../data/teachers.mjs';
 
 async function fetchAndDisplayTeachers() {
     try {
-        const dataModule = await import('..data/teachers.mjs');
+        const dataModule = await import('../data/teachers.mjs');
         const teachersData = dataModule.teachers;
 
         displayTeacherCards(teachersData);
