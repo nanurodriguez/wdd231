@@ -50,3 +50,5 @@ export function displayTeacherCards(teachers) {
         teachersContainer.innerHTML += cardHTML;
     });
 }
+
+//

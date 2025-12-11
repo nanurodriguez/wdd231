@@ -1,0 +1,141 @@
+<!--This page will display the enroll form  in my sunnyside preschool page-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sunnyside Preschool - Enroll</title>
+
+        <meta name="author" content="Nancy Bell">
+        <meta name="description" content="This is a stuff page for Sunnyside Preschool, highlighting our nurturing environment and play-based learning approach. The website aims to inform and engage potential parents and families about our programs and enrollment process.">
+        <meta property="og:description" content="This is a homepage for Sunnyside Preschool, highlighting our nurturing environment and play-based learning approach. The website aims to inform and engage potential parents and families about our programs and enrollment process.">
+        <meta property="og:image" content="https://nanurodriguez.github.io/wdd231/final-project/images/preschool-hero.webp">
+        <meta property="og:url" content="https://nanurodriguez.github.io/wdd231/final-project/index.html">
+        <meta property="og:title" content="Homepage - SunnySide Preschool">
+
+        
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/general-style/base.css">
+        <link rel="stylesheet" href="styles/general-style/navigation.css">
+        <link rel="stylesheet" href="styles/pages/enroll.css">
+        <link rel="stylesheet" href="styles/general-style/footer.css">
+        
+
+        <link rel="icon" type="image/png" href="images/icons/preschool-icon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=M+PLUS+Rounded+1c:wght@700;900&display=swap" rel="stylesheet">
+
+        <script src="scripts/enroll.mjs" defer type="module"></script>
+        <script src="scripts/main.mjs" defer type="module"></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <img src="images/icons/preschool-icon.png" alt="Sunnyside Preschool Logo"   width="100" height="100">
+                <div class="title">Sunnyside Preschool</div>
+
+                <button id="ham-button" class="hamburger" aria-label="navigation"></button>
+
+                <nav id= "nav-bar" class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="current">Home</a></li>
+                        <li><a href="stuff.html">Our Teachers</a></li>
+                        <li><a href="enroll.html">Enroll Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        
+        <main class="enrollment-main">
+            <section class="enrollment-form-section">
+                <h2>Start Your Child's Journey with Sunnyside</h2>
+                <p>Please fill out the form below to begin the enrollment process. Fields marked with an asterisk (<span class="required">*</span>) are required.</p>
+                
+                <form id="enrollment-form" method="get" action="success.html">
+
+                    <fieldset>
+                        <legend>Parent/Guardian Contact</legend>
+                        
+                        <label for="pName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="pName" name="parentName" required>
+
+                        <label for="pEmail">Email <span class="required">*</span></label>
+                        <input type="email" id="pEmail" name="parentEmail" required>
+
+                        <label for="pPhone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="pPhone" name="parentPhone" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Child's Details</legend>
+                        
+                        <label for="cName">Child's Full Name <span class="required">*</span></label>
+                        <input type="text" id="cName" name="childName" required>
+
+                        <label for="cDOB">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="cDOB" name="childDOB" required>
+                        
+                        <label for="cGender">Gender (Optional)</label>
+                        <select id="cGender" name="childGender">
+                            <option value="">Select...</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Non-Binary/Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Program Interest</legend>
+                        
+                        <p class="form-instruction">Please select the program you are interested in:</p>
+                        
+                        <div class="program-options">
+                            <input type="radio" id="program1" name="program" value="toddler_full" required>
+                            <label for="program1">Toddler Program (Full Day)</label>
+                            
+                            <input type="radio" id="program2" name="program" value="preschool_part">
+                            <label for="program2">Preschool (Half Day)</label>
+                            
+                            <input type="radio" id="program3" name="program" value="prek_full">
+                            <label for="program3">Pre-K Readiness (Full Day)</label>
+                        </div>
+
+                        <label for="startDate">Target Start Date</label>
+                        <input type="month" id="startDate" name="targetStart">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Final Steps</legend>
+
+                        <label for="comments">Additional Questions/Comments</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+
+                        <div class="consent-check">
+                            <input type="checkbox" id="consent" name="contactConsent" required>
+                            <label for="consent">I agree to be contacted by Sunnyside Preschool regarding this application. <span class="required">*</span></label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="cta-button primary-cta submit-button">Submit Enrollment Application</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container footer-content">
+                <p id="last-visit" class="lastVisit"></p>
+                <p id="currentYear" class="currentYear"></p>
+                <p id="lastModified" class="lastModified">Last Modified</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=61572028127332" target="_blank"><img src="images/icons/facebook.svg" alt="Facebook Icon" width="20" height="20"></a>
+                <a href="https://www.instagram.com/nancybellweb/" target="_blank"><img src="images/icons/instagram.svg" alt="Instagram Icon" width="20" height="20"></a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -18,7 +18,9 @@
     text-align: center;
     padding: 20px;
 }
-
+.teacher-modal {
+    z-index:1000;
+}
 .teacher-profile-img {
     width: 150px; 
     height: 150px;
